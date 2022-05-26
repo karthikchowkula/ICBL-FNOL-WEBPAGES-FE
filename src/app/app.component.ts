@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'FNOL-WEB-PAGES_FRONTEND';
+  public link!: string;
+  constructor(private router:Router){
+    this.link=router.url
+  }
 }

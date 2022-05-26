@@ -4,8 +4,8 @@ import { LoginComponent } from './components/login/login.component';
 import { HeaderFooterComponent } from './components/header-footer/header-footer.component';
 import { FormsModule } from '@angular/forms';
 import { MaterialModule } from '../shared/material.module';
-
-
+import { CoreRoutingModule } from './core-routing.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -16,11 +16,15 @@ import { MaterialModule } from '../shared/material.module';
     CommonModule,
     FormsModule,
     MaterialModule,
+    RouterModule,
+    CoreRoutingModule,
     
     
     
-    
-    
-  ]
+  ],
+  exports:[
+
+    LoginComponent
+  ],
 })
 export class CoreModule { }
