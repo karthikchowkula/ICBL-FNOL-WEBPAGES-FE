@@ -1,1 +1,307 @@
 /* You can add global styles to this file, and also import other style files */
+// header_main
+.header_main{
+    background:grey;
+  
+  }
+  
+  .index_data{
+  // background: red;
+  }
+  
+  .index_body{
+    // background-image: url('../assets/images/bg_img.PNG');
+    background-repeat: no-repeat;
+    background-size: 15% 30%;
+    background-position: center;
+  
+  }
+  
+  .login_btn_btn{
+    border: 1px solid red;
+    border-radius: 20px;
+  }
+  
+  
+  .box_main{
+    // border: 1px solid red;
+    width: 25%;
+    margin: 0 auto;
+    margin-top: 15%;
+    padding: 15px;
+  }
+  
+  
+  .login_btn{
+    text-align: center;
+    // border: 1px solid purple;
+    // color: black;
+    // width: 75px;
+    // border-radius: 25px;
+    // font-weight: 600;
+    // font-size: 13px;
+  }
+  
+  
+  .login_btn_btn{
+    border:2px solid purple solid;
+    color: black;
+    width: auto;
+    border-radius: 25px;
+  
+  }
+  
+  
+  
+  .header_sector{
+  
+  }
+  
+  .header_sector h3{
+    font-size: 16px;
+    font-weight: 700;
+    color: purple;
+  
+  }
+  
+  // assistance_form
+  .header_sector{
+    padding: 15px 0px;
+    color: purple;
+    font-size: 25px;
+  }
+  
+  .number_index{
+    text-align: center;
+  
+  }
+  
+  .last_demo{
+    text-align: right;
+    padding: 15px 0px;
+  
+  }
+  
+  .roman_variant{
+  display: flex;
+  
+  }
+  
+  
+  .drop-data{
+    min-width:100% ;
+  }
+  .submit_btn{
+  
+  }
+  
+  .column_submit{
+  text-align: center;
+  }
+  .header_sec{
+    // background-image: url('../assets/images/bg_img.PNG');
+    background-repeat: no-repeat;
+    background-size: 18% 55%;
+    background-position: center;
+  }
+  .main_header{
+    background: gray;
+  }
+  // reset
+  .reset_box{
+  
+    padding: 20px;
+    width: 28%;
+      margin: 0 auto;
+      text-align: center;
+      background: #ffffff;
+      margin-top: 8%;
+  }
+  .reset_box img{
+    width: 65%;
+      padding-bottom: 30px;
+  }
+  .reset_content{
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  }
+  
+  .reset_header{
+    background: purple;
+    height: 650px;
+    width: 100%;
+  }
+  
+  // otp
+  .reset_box{
+  
+  }
+  
+  .reset_para{
+    margin: 12px 0px;
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+  
+  }
+  .verify_btn{
+    text-align: center;
+    border: 1px solid purple;
+    color: #ffffff;
+    width: auto;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 13px;
+    background: purple;
+  }
+  .reset_btn_btns{
+    text-align: center;
+    border: 1px solid purple;
+    color: #ffffff;
+    width: auto;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 50px;
+    background: purple;
+    border: 25px;
+    padding: 10px !important;
+  
+  }
+  .reset_btns{
+    margin-top: 35px;
+    margin-bottom:25px;
+  
+  }
+  
+  /* ---------------------------- changes password ---------------------------- */
+  .data_input{
+    display: flex;
+  }
+  .number_roman{
+  display: flex;
+  width: 30%;
+  }
+  
+  
+  .password_admin{
+    display: flex;
+  }
+  
+  .pass_data{
+    color: #000;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 15px 0px !important;
+  }
+  .changed_btn{
+  
+    border: 1px solid #000 !important;
+    color: #ffffff;
+  
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 13px;
+    background: gray !important;
+    margin-right: 30px !important;
+  }
+  
+  .reset_btn{
+  
+    border: 1px solid #000 ;
+    color: #ffffff;
+    background: gray ;
+  
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 13px ;
+  }
+  
+  
+  .changes{
+    display: flex;
+  }
+  
+  
+  /* ---------------------------------- SAMS ---------------------------------- */
+  .current_btn{
+    border:1px solid purple !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    border-radius: 50px !important;
+  
+  }
+  
+  
+  .map_buttons{
+    margin: 25px 0px ;
+  
+  }
+  
+  .left_box{
+    background: #000000;
+    width: 16%;
+    border-radius: 10px;
+    border:1px solid #000000;
+    padding: 10px;
+    position: absolute;
+    top: 35%;
+  }
+  
+  .right_box{
+    padding: 10px;
+    position: absolute;
+    background: #000000;
+    border:1px solid #000000;
+    width: 16%;
+    border-radius: 10px;
+    top:35%;
+    right: 0px;
+  
+  
+  }
+  .main_sectors{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ffffff;
+  }
+  
+  
+  .map_main{
+  position: relative;
+  }
+  
+  .assign_numbers{
+    border: 1px solid purple !important;
+    background: #ffffff !important;
+    color: purple;
+    border-radius: 25px !important;
+    font-size: 14px;
+    font-weight: 500;
+  
+  }
+  .assigns_btns{
+    margin-top: 25px;
+  }
+  
+  .log_box{
+    border: 1px solid red;
+    width: 20%;
+    padding: 15px;
+    text-align: center;
+    margin-top: 15%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .main_log{
+    text-align: center;
+  }
+  
+  
+  .log_btn{
+    border: 1px solid red;
+    background: red;
+    color: #ffffff;
+  }
+  
