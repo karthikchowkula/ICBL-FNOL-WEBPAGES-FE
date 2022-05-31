@@ -213,7 +213,7 @@ $font-family-bold: 'Montserrat', sans-serif;
   .index_body{
     background-image: url('./assets/images/bg_img.PNG');
     background-repeat: no-repeat;
-    background-size: 15% 50%;
+    background-size: 30% 50%;
     background-position: center;
   
   }
@@ -506,3 +506,6 @@ $font-family-bold: 'Montserrat', sans-serif;
     color: #ffffff;
   }
   
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+@import './scss/_variables.scss';
