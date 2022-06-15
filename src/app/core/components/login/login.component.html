@@ -18,7 +18,7 @@
          <!-- Login Form Section-->
 <section class="index_body">
       <section class="form-section">
-          <form [formGroup]="loginForm" (ngSubmit)="loginSubmit()">
+          <form [formGroup]="loginForm" id="form"(ngSubmit)="loginSubmit()">
             <mat-form-field >
                    <mat-label>Email</mat-label>
                       <input type="email" matInput formControlName="email"
@@ -40,8 +40,8 @@
               
               </mat-form-field>
                   
-              <button mat-raised-button class="loginBtn"  >Log In</button>
-          
+              <button mat-raised-button class="loginBtn" type="submit" >Log In</button>
+              <p (click)="forgotpassword()">ForgotPassword</p>
           </form>
       
          </section>

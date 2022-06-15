@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AssistanceReqFormComponent } from './assistance-req-form.component';
+import { AdminComponent } from './admin.component';
 
-describe('AssistanceReqFormComponent', () => {
-  let component: AssistanceReqFormComponent;
-  let fixture: ComponentFixture<AssistanceReqFormComponent>;
+describe('AdminComponent', () => {
+  let component: AdminComponent;
+  let fixture: ComponentFixture<AdminComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AssistanceReqFormComponent ]
+      declarations: [ AdminComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AssistanceReqFormComponent);
+    fixture = TestBed.createComponent(AdminComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

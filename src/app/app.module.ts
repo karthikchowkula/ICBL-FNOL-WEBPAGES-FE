@@ -8,7 +8,10 @@ import { MaterialModule } from './shared/material.module';
 import { CoreModule } from './core/core.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/material/core';
-
+import { AuthenticationServiceService } from './core/services/authentication-service.service';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+import { SecureLocalStorageService } from './core/services/securels.service';
 @NgModule({
   declarations: [
     AppComponent
@@ -20,14 +23,15 @@ import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/materi
     MaterialModule,
     CoreModule,
     BrowserAnimationsModule,
-    NgbModule
-    
+    NgbModule,
+    RouterModule,HttpClientModule
     
     
     
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [{provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher},
+    AuthenticationServiceService,SecureLocalStorageService
   ],
   bootstrap: [AppComponent]
 })

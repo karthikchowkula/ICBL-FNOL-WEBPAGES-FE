@@ -7,10 +7,17 @@ import { MaterialModule } from '../shared/material.module';
 import { CoreRoutingModule } from './core-routing.module';
 import { RouterModule } from '@angular/router';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { AuthenticationServiceService } from './services/authentication-service.service';
+import { HttpClientModule } from '@angular/common/http';
+import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { SecureLocalStorageService } from './services/securels.service';
 @NgModule({
   declarations: [
     LoginComponent,
     HeaderFooterComponent,
+    ResetPasswordComponent,
+    AdminComponent,
   ],
   imports: [
     CommonModule,
@@ -20,8 +27,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     CoreRoutingModule,
     MatFormFieldModule,
     ReactiveFormsModule,
-    
+    HttpClientModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  providers:[SecureLocalStorageService]
 })
 export class CoreModule { }

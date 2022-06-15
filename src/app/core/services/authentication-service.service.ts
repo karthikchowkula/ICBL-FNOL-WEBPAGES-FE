@@ -9,20 +9,46 @@ import { MatSnackBar } from '@angular/material/snack-bar'
 import { DOCUMENT } from '@angular/common';
 import {environment} from '../../../environments/environment';
 import { User } from '../Models/User-login';
-const url:string=environment.URL+`/login`
+const url:string=environment.URL+`/v1/auth/login`
+
+
 @Injectable({
   providedIn: 'root'
 })
+
 export class AuthenticationServiceService {
 
   constructor(private http: HttpClient, private router: Router, 
     private snackBar: MatSnackBar,
-    @Inject(DOCUMENT) private document: Document) { }
+    @Inject(DOCUMENT) private document: Document) {
+    
+     }
 
 login(email:string,password:string){
-
-}
+  const httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+  
+      withCredentials: 'true'
+    })
+  };
+console.log(url)
+  debugger
+  this.http.post<any>(url,
+  { "email": email, "password": password},httpOptions)
+  .subscribe((res) => {
+      console.log(res)
+      
+    },
+      (err:HttpErrorResponse)=>{
+        console.log(err)
+      }
+      );
   
 
   }
+}
+function getCookie(arg0: string): string | string[] {
+  throw new Error('Function not implemented.');
+}
 

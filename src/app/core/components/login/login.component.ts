@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MAT_DIALOG_SCROLL_STRATEGY_FACTORY } from '@angular/material/dialog';
 import { FormBuilder, FormGroup, Validators, FormControl, Form } from '@angular/forms';
 import { AuthenticationServiceService } from '../../services/authentication-service.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -13,7 +14,7 @@ export class LoginComponent implements OnInit {
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [Validators.required,Validators.minLength(12)])
   })
-  constructor(private fb:FormBuilder,private authservice:AuthenticationServiceService) { }
+  constructor(private router:Router,private fb:FormBuilder,private authservice:AuthenticationServiceService) { }
 
   ngOnInit(): void {
     console.log("login componentS")
@@ -24,14 +25,17 @@ export class LoginComponent implements OnInit {
 
 loginSubmit(){
              
-
+debugger
           if(this.loginForm.valid){ 
             let email=this.loginForm.get('email')?.value
             let password=this.loginForm.get('password')?.value
-                  this.authservice.login(email,password)
+            this.authservice.login(email,password)
           }
 
       
+}
+forgotpassword(){
+  this.router.navigateByUrl('/resetpass')
 }
   
 }
