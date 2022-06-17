@@ -28,20 +28,33 @@
                     <div class="custom-form-group">
                       <div class="custom-form-control">
                         <!-- <mat-form-field class="example-full-width"  appearance="outline"> -->
-                          <mat-label class="data_text">User Name*</mat-label>
-                          <mat-form-field class="example-full-width" appearance="outline">
-                          <input    matInput placeholder="User Name" >
-                        </mat-form-field>
-                        <!-- password -->
-                        <mat-label  class="data_text">Password*</mat-label>
-                        <mat-form-field  class="example-full-width" appearance="outline">
-                          <input matInput placeholder="password" >
-                        </mat-form-field>
-                        <!-- login_btn -->
-                        <div class="login">
-                        <button class="login_btn"mat-button>Login</button>
-                        </div>
-
+                          <form [formGroup]="loginForm" id="form"(ngSubmit)="loginSubmit()">
+                            <mat-form-field >
+                            <mat-label>Email</mat-label>
+                            <input type="email" matInput formControlName="email"
+                            placeholder="user@gmail.com" required>
+                            
+                            <mat-error *ngIf="this.loginForm.get('email')?.hasError('required')">Please enter email to proceed</mat-error>
+                            
+                            <mat-error *ngIf="this.loginForm.get('email')?.hasError('email')">Please enter valid email</mat-error>
+                            
+                            
+                            
+                            </mat-form-field>
+                            <mat-form-field >
+                            <mat-label>Password</mat-label>
+                            
+                            <input matInput type="password" placeholder="password" formControlName="password" required>
+                            
+                            <mat-error *ngIf="this.loginForm.get('password')?.hasError('required')">Please enter password to proceed</mat-error>
+                            
+                            <mat-error *ngIf="this.loginForm.get('password')?.hasError('minlength')">Password length must be min 12 digits</mat-error>
+                            
+                            </mat-form-field>
+                            
+                            <button mat-raised-button class="loginBtn" type="submit" >Log In</button>
+                            <p (click)="forgotpassword()">ForgotPassword</p>
+                            </form>
                       </div>
                     </div>
 
