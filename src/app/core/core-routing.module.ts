@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { HeaderFooterComponent } from './components/header-footer/header-footer.component';
 
-import { TwoComponent } from '../features/two/two.component';
+
 import { AssistanceReqFormComponent } from '../features/assistance-req-form/assistance-req-form.component';
 
 
