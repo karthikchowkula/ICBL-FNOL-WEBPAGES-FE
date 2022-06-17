@@ -21,7 +21,7 @@ body {
   padding: 0px;
   // font-family: $font-family;
   font-size: 14px !important;
-  background: whitesmoke;
+  background-color:whitesmoke !important;
   //background: #fdfdfd;
   color:#788295 !important;
   font-weight: 400 !important;
@@ -32,7 +32,7 @@ body {
 }
 
 .master-router-sec {
-  background: #fff;
+  background: red;
   min-height: 100vh;
 }
 
@@ -211,7 +211,7 @@ $font-family-bold: 'Montserrat', sans-serif;
   }
   
   .index_body{
-    background-image: url('./assets/images/bg_img.PNG');
+    // background-image: url('./assets/images/bg_img.PNG');
     background-repeat: no-repeat;
     background-size: 30% 50%;
     background-position: center;

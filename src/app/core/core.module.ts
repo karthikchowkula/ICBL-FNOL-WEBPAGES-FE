@@ -12,12 +12,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { SecureLocalStorageService } from './services/securels.service';
+
 @NgModule({
   declarations: [
     LoginComponent,
     HeaderFooterComponent,
     ResetPasswordComponent,
     AdminComponent,
+   
   ],
   imports: [
     CommonModule,
