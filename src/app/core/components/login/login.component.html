@@ -27,10 +27,12 @@
                   <div class="form-section">
                     <div class="custom-form-group">
                       <div class="custom-form-control">
-                        <!-- <mat-form-field class="example-full-width"  appearance="outline"> -->
+                       
                           <form [formGroup]="loginForm" id="form"(ngSubmit)="loginSubmit()">
-                            <mat-form-field >
-                            <mat-label>Email</mat-label>
+                           <mat-label class="data_text">Email *</mat-label>
+                            <mat-form-field  appearance="outline">
+                         
+                        
                             <input type="email" matInput formControlName="email"
                             placeholder="user@gmail.com" required>
                             
@@ -41,8 +43,9 @@
                             
                             
                             </mat-form-field>
-                            <mat-form-field >
-                            <mat-label>Password</mat-label>
+                            <mat-label class="data_text">Password *</mat-label>
+                            <mat-form-field  appearance="outline">
+                           
                             
                             <input matInput type="password" placeholder="password" formControlName="password" required>
                             
@@ -51,9 +54,12 @@
                             <mat-error *ngIf="this.loginForm.get('password')?.hasError('minlength')">Password length must be min 12 digits</mat-error>
                             
                             </mat-form-field>
-                            
-                            <button mat-raised-button class="loginBtn" type="submit" >Log In</button>
-                            <p (click)="forgotpassword()">ForgotPassword</p>
+                            <div class="login">
+                            <button mat-raised-button class="login_btn" type="submit" >Log In</button>
+                            </div>
+                            <div class="forgot">
+                            <p class="forgot_text" (click)="forgotpassword()">Forgot Password</p>
+                            </div>
                             </form>
                       </div>
                     </div>

@@ -1,0 +1,43 @@
+.Manage_num {}
+
+.users_admin {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px;
+    background: purple;
+    color: white;
+}
+
+.add_btn {
+    background: green;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: 1px solid green;
+}
+
+.add_btn i {
+    margin-right: 10px;
+
+}
+
+.Manage_num h2 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 0px;
+    margin-top: 8px;
+
+}
+
+table {
+    width: 100%;
+}
+
+.table_head {
+
+    color: #000000;
+    font-size: 14px;
+    font-weight: 600;
+}
