@@ -5,6 +5,7 @@ export interface PeriodicElement {
   position: number;
   weight: number;
   symbol: string;
+  // symbols: string;
 }
 
 
@@ -19,6 +20,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
   {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
   {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
+  {position: 11, name: 'Data', weight: 22.1797, symbol: 'G',},
 ];
 
 @Component({
@@ -27,7 +29,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent  {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol','symbols',];
   dataSource = ELEMENT_DATA;
 
   constructor() { }
