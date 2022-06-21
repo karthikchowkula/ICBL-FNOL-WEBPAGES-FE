@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'app-reset-password',
@@ -12,13 +13,19 @@ resetForm:FormGroup=this.fb.group({
     email: new FormControl('', [Validators.required, Validators.email]),
     
   })
-  constructor(private router:Router,private fb:FormBuilder,) { }
+  constructor(private router:Router,private fb:FormBuilder,private resetservice:ApiService) { }
 
   ngOnInit(): void {
     console.log("login componentS")
     
   }
-resetSubmit(){
-  
+reset(){
+  debugger
+  if(this.resetForm.valid){
+    let email=this.resetForm.get('email')?.value;
+    this.resetservice.resetpassword(email).subscribe(res=>{
+      console.log(res)
+    })
+  }
 }
 }

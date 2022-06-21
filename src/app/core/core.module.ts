@@ -1,3 +1,4 @@
+import { AuthInterceptor } from './Interceptors/auth.interceptor';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from './components/login/login.component';
@@ -29,8 +30,10 @@ import { SecureLocalStorageService } from './services/securels.service';
     CoreRoutingModule,
     MatFormFieldModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+
   ],
+
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers:[SecureLocalStorageService]
 })

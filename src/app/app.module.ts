@@ -9,9 +9,11 @@ import { CoreModule } from './core/core.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/material/core';
 import { AuthenticationServiceService } from './core/services/authentication-service.service';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { SecureLocalStorageService } from './core/services/securels.service';
+import {NativeDateAdapter, DateAdapter, MAT_DATE_FORMATS} from '@angular/material/core';
+import { AuthInterceptor } from './core/Interceptors/auth.interceptor';
 @NgModule({
   declarations: [
     AppComponent
@@ -31,7 +33,12 @@ import { SecureLocalStorageService } from './core/services/securels.service';
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [{provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher},
-    AuthenticationServiceService,SecureLocalStorageService
+    AuthenticationServiceService,SecureLocalStorageService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+  }  
   ],
   bootstrap: [AppComponent]
 })

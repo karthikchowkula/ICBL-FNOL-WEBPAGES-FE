@@ -9,11 +9,11 @@ export class SecureLocalStorageService {
   constructor() { }
   
 
-  encrypt(key:string,value : string) : string{
+  encrypt(value : string) : string{
     return CryptoJS.AES.encrypt(value, this.secretKey.trim()).toString();
   }
 
-  decrypt(key: string,value:string){
+  decrypt(value:string){
     return CryptoJS.AES.decrypt(value, this.secretKey.trim()).toString(CryptoJS.enc.Utf8);
     
   }
