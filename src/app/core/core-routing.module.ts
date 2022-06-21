@@ -7,6 +7,7 @@ import { HeaderFooterComponent } from './components/header-footer/header-footer.
 
 import { AssistanceReqFormComponent } from '../features/assistance-req-form/assistance-req-form.component';
 import { AdminComponent } from './components/admin/admin.component';
+import { AdduserComponent } from './components/admin/adduser/adduser.component';
 
 
 
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path:'header_footer',component:HeaderFooterComponent},
   {path:'assitance_reqs_forms',component:AssistanceReqFormComponent},
   {path:'admin',component:AdminComponent},
+  {path:'add_user',component:AdduserComponent},
  
   
 ];

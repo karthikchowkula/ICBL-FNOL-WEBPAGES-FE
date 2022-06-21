@@ -41,3 +41,36 @@ table {
     font-size: 14px;
     font-weight: 600;
 }
+
+.user_head{}
+
+.user_head h1{
+
+    font-size: 22px;
+    font-weight: 700;
+    color: purple;
+    margin-bottom: 0px;
+
+}
+
+.log_out{
+    // color: #ffffff;
+}
+
+
+.log_out_btn{
+    color: #000000;
+    font-size: 13px;
+    font-weight: 600;
+    background: #ffffff;
+    // padding: 10px;
+    border-radius: 15px;
+    border: 2px solid purple;
+}
+
+.admin_header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
