@@ -1,3 +1,4 @@
+import { ApiService } from './../../../services/api.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormControlName, FormGroup, Validators } from '@angular/forms';
 
@@ -15,10 +16,12 @@ export class AdduserComponent implements OnInit {
    confirmpassword:new FormControl('',[Validators.required,Validators.minLength(12)]),
    role:new FormControl('',Validators.required)
   })
-  constructor(private fb:FormBuilder) { }
+  constructor(private fb:FormBuilder,private apiservice:ApiService) { }
 
   ngOnInit(): void {
-
+this.apiservice.getApp().subscribe(res=>{
+  console.log(res)
+})
   }
 
 

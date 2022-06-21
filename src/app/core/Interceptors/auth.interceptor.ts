@@ -17,12 +17,13 @@ export class AuthInterceptor implements HttpInterceptor {
   constructor(private apiservice:ApiService,private secure:SecureLocalStorageService) {}
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
+    
     return next.handle(request).pipe(
       catchError(async (error: HttpErrorResponse) => {
         if (error.status === 401) {
-          this.handlerefreshtoken(request,next)
+          //this.handlerefreshtoken(request,next)
         } else {
-      
+          
         }
       })
     ) as any;

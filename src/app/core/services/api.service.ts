@@ -11,16 +11,23 @@ import {environment} from '../../../environments/environment';
 import { getApp } from '../Models/getapp';
 const reseturl:string=environment.URL+`/v1/auth/resetpass`
 const refreshurl:string=environment.URL+`/v1/auth/refresh`
-const getAppurl:string=environment.URL+`/v1/auth/getApp`
+const getAppurl:string=environment.URL+`/v1/constants/getApp`
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
-
+httpOptions!:object
 
   constructor(private snackbar:MatSnackBar,private http: HttpClient) {
-    
+   this.httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        observe: 'response' as 'response',
+        withCredentials: 'true',
+        
+      })
+    };
    }
    refreshToken(refreshtoken:string){
     const httpOptions = {
