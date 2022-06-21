@@ -13,7 +13,7 @@ resetForm:FormGroup=this.fb.group({
     email: new FormControl('', [Validators.required, Validators.email]),
     
   })
-  constructor(private router:Router,private fb:FormBuilder,private resetservice:ApiService) { }
+  constructor(private router:Router,private fb:FormBuilder,private apiservice:ApiService) { }
 
   ngOnInit(): void {
     console.log("login componentS")
@@ -23,7 +23,7 @@ reset(){
   debugger
   if(this.resetForm.valid){
     let email=this.resetForm.get('email')?.value;
-    this.resetservice.resetpassword(email).subscribe(res=>{
+    this.apiservice.resetpassword(email).subscribe(res=>{
       console.log(res)
     })
   }
