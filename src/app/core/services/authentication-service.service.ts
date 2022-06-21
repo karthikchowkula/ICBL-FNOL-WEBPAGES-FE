@@ -46,7 +46,13 @@ console.log(url)
     localStorage.setItem('App',this.secure.encrypt(res['response_model']['app']))
     localStorage.setItem('role',res['response_model']['role'])
     this.loggedIn.next(true)
-    
+    debugger
+    if(res['response_model']['app']=="Admin"){
+      this.router.navigateByUrl('/admin')
+    }
+    else if(res['response_model']['app']=="CC"){
+      this.router.navigateByUrl('/callcenter')
+    }
  },
       (err:HttpErrorResponse)=>{
         console.log(err)
@@ -55,7 +61,9 @@ console.log(url)
 
 
   }
- 
+ decrypt(value:string){
+  return this.secure.decrypt(value)
+ }
 }
 
 

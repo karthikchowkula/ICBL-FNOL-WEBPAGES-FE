@@ -8,8 +8,11 @@ import { MatDialog } from '@angular/material/dialog'
 import { MatSnackBar } from '@angular/material/snack-bar'
 import { DOCUMENT } from '@angular/common';
 import {environment} from '../../../environments/environment';
+import { getApp } from '../Models/getapp';
 const reseturl:string=environment.URL+`/v1/auth/resetpass`
 const refreshurl:string=environment.URL+`/v1/auth/refresh`
+const getAppurl:string=environment.URL+`/v1/auth/getApp`
+
 @Injectable({
   providedIn: 'root'
 })
@@ -31,7 +34,9 @@ export class ApiService {
     return this.http.post<any>(refreshurl,{},httpOptions)
     .pipe(catchError(this.handleError));
 }
-   
+ getApp(){
+  return this.http.get<getApp>(getAppurl).pipe(catchError(this.handleError))
+ }  
   resetpassword(email:string){
     
   return this.http.post<any>(reseturl,{"email":email})

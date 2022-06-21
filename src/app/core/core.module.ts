@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { SecureLocalStorageService } from './services/securels.service';
+import { AdduserComponent } from './components/admin/adduser/adduser.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { SecureLocalStorageService } from './services/securels.service';
     HeaderFooterComponent,
     ResetPasswordComponent,
     AdminComponent,
+    AdduserComponent,
    
   ],
   imports: [

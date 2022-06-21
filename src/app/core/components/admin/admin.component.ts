@@ -1,4 +1,6 @@
+import { AdduserComponent } from './adduser/adduser.component';
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 
 export interface PeriodicElement {
   name: string;
@@ -32,8 +34,17 @@ export class AdminComponent  {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol','symbols',];
   dataSource = ELEMENT_DATA;
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
-  
+  Adduser_dialog(){
+    const dialogRef = this.dialog.open(AdduserComponent, {
+      width: '1050px',
+      height:'500px'
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
 
-}
+    });
+  }
+  }
+
