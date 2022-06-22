@@ -21,10 +21,11 @@ export class AuthInterceptor implements HttpInterceptor {
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
  let accesstoken=this.secure.decrypt(localStorage.getItem("access_id")!)
+ if(!this.isrefresh){
     if (accesstoken) {
      request= request.clone({ setHeaders: { Authorization: `Bearer ${accesstoken}` } });
     }
- 
+  }
     return next.handle(request).pipe(
       catchError(error => {
         debugger
@@ -44,6 +45,8 @@ export class AuthInterceptor implements HttpInterceptor {
      // I have created a route on my back-end to generate a new access token
       return this.apiservice.refreshToken(refreshtoken).pipe(
         switchMap((response:any) => {
+
+          debugger
           console.log(response)
           this.isrefresh=false
           localStorage.setItem("access_id",this.secure.encrypt(response['access_token']))

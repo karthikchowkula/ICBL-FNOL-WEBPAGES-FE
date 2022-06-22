@@ -1,1 +1,24 @@
-<p>edituser works!</p>
+<form [formGroup]="edituserForm" id="form">
+    <mat-form-field class="" pearance="outline">
+    
+        <input matInput  formControlName="username"  placeholder="abc@gmail.com">
+      </mat-form-field>
+    <mat-form-field class="" pearance="outline">
+    
+      <input matInput formControlName="email" placeholder="username">
+    </mat-form-field>
+   
+      <mat-form-field class="" pearance="outline">
+    
+        <input matInput  formControlName="phonenumber"  placeholder="phonenumber">
+      </mat-form-field>
+      <mat-radio-group
+      aria-labelledby="example-radio-group-label"
+      class="example-radio-group"
+      >
+      <mat-radio-button  
+      *ngFor="let role of roleValues" formControlName="role" class="example-radio-button" >
+        {{role}}
+      </mat-radio-button>
+    </mat-radio-group>
+   </form>

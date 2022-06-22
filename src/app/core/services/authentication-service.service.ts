@@ -12,6 +12,7 @@ import {environment} from '../../../environments/environment';
 
 const url:string=environment.URL+`/v1/auth/login`
 import { SecureLocalStorageService } from './securels.service';
+import { RoleService } from './role.service';
 
 
 @Injectable({
@@ -20,7 +21,7 @@ import { SecureLocalStorageService } from './securels.service';
 
 export class AuthenticationServiceService {
   loggedIn = new BehaviorSubject<boolean>(false);
-  constructor(private http: HttpClient, private router: Router, private secure:SecureLocalStorageService,
+  constructor(private roleservice:RoleService,private http: HttpClient, private router: Router, private secure:SecureLocalStorageService,
     private snackBar: MatSnackBar,
     @Inject(DOCUMENT) private document: Document) {
     
@@ -45,6 +46,7 @@ console.log(url)
     localStorage.setItem('expiresat',JSON.stringify(res['response_model']['expiresat']))
     localStorage.setItem('App',this.secure.encrypt(res['response_model']['app']))
     localStorage.setItem('role',res['response_model']['role'])
+    this.roleservice.getRole()
     this.loggedIn.next(true)
     debugger
     if(res['response_model']['app']=="Admin"){

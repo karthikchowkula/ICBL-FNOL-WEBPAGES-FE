@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-deleteuser',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./deleteuser.component.scss']
 })
 export class DeleteuserComponent implements OnInit {
-
-  constructor() { }
+  deleteuserForm:FormGroup=this.fb.group({
+    
+    email:new FormControl('',([Validators.required,Validators.email])),
+    
+   })
+ 
+  constructor(private fb:FormBuilder) { }
 
   ngOnInit(): void {
+console.log("delete user component")
   }
+
 
 }
