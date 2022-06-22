@@ -21,7 +21,7 @@ body {
   padding: 0px;
   // font-family: $font-family;
   font-size: 14px !important;
-  background-color:whitesmoke !important;
+  background:#ffffff !important;
   //background: #fdfdfd;
   color:#788295 !important;
   font-weight: 400 !important;
@@ -45,6 +45,12 @@ body {
   background: red;
   min-height: 100vh;
 }
+
+
+
+
+
+
 
 /* ------------------------------- end custom ------------------------------- */
 
@@ -74,6 +80,7 @@ body {
         .mat-form-field-wrapper {
           margin: 0px !important;
           padding-bottom: 0px !important;
+          background: transparent !important;
 
           .mat-form-field-flex {
             outline: 0px !important;
