@@ -9,7 +9,7 @@ import { MatDialog } from '@angular/material/dialog'
 import { MatSnackBar } from '@angular/material/snack-bar'
 import { DOCUMENT } from '@angular/common';
 import {environment} from '../../../environments/environment';
-import { User } from '../Models/User-login';
+
 const url:string=environment.URL+`/v1/auth/login`
 import { SecureLocalStorageService } from './securels.service';
 

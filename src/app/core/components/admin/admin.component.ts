@@ -1,6 +1,9 @@
 import { AdduserComponent } from './adduser/adduser.component';
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { ApiService } from '../../services/api.service';
+import { MatTableDataSource } from '@angular/material/table';
+import { Users } from '../../Interfaces/getusers';
 
 export interface PeriodicElement {
   name: string;
@@ -31,10 +34,20 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent  {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol','symbols',];
-  dataSource = ELEMENT_DATA;
+  displayedColumns: string[] = ['username', 'email', 'phonenumber', 'role','Actions','delete','changepassword'];
+  dataSource!:MatTableDataSource<Users>
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog,private apiservice:ApiService) { }
+ngOnInit(): void {
+  debugger
+  //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+  //Add 'implements OnInit' to the class.
+this.apiservice.getUsers().subscribe(
+ (res)=>{
+    console.log(res)
+    this.dataSource=new MatTableDataSource<Users>(res)
+  })
+}
 
   Adduser_dialog(){
     const dialogRef = this.dialog.open(AdduserComponent, {
