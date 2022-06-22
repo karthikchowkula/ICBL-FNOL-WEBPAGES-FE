@@ -41,7 +41,7 @@
                     <h2>Manage Users</h2>
                 </div>
                 <div class="add_num">
-                    <button class="add_btn" (click)="Adduser_dialog()" mat-button><i class="fa fa-plus-circle" aria-hidden="true"></i>Add New
+                    <button class="add_btn" (click)="addUser_dialog()" mat-button><i class="fa fa-plus-circle" aria-hidden="true"></i>Add New
                         User</button>
                 </div>
 
@@ -90,20 +90,20 @@
                     <ng-container matColumnDef="Actions">
                         <th class="table_head" mat-header-cell *matHeaderCellDef>Actions </th>
                         <td mat-cell *matCellDef="let element" >
-                            <button mat-button >Edit</button>
+                            <button mat-button (click)="editUser_dialog()">Edit</button>
                        </td>
                        </ng-container>
                        <ng-container matColumnDef="delete">
               
                     <th class="table_head" mat-header-cell *matHeaderCellDef></th>
                        <td mat-cell *matCellDef="let element" >
-                        <button mat-button >Delete</button>
+                        <button mat-button (click)="deleteUser_dialog()">Delete</button>
                    </td>
                 </ng-container>
                 <ng-container matColumnDef="changepassword">
                     <th class="table_head" mat-header-cell *matHeaderCellDef></th>
                    <td mat-cell *matCellDef="let element" >
-                    <button mat-button >Change Password</button>
+                    <button mat-button (click)="changePassword_dialog()" >Change Password</button>
                </td>
                       </ng-container>
                   

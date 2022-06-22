@@ -4,6 +4,9 @@ import { MatDialog } from '@angular/material/dialog';
 import { ApiService } from '../../services/api.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { Users } from '../../Interfaces/getusers';
+import { EdituserComponent } from './edituser/edituser.component';
+import { ChangepasswordComponent } from './changepassword/changepassword.component';
+import { DeleteuserComponent } from './deleteuser/deleteuser.component';
 
 export interface PeriodicElement {
   name: string;
@@ -49,8 +52,38 @@ this.apiservice.getUsers().subscribe(
   })
 }
 
-  Adduser_dialog(){
+  addUser_dialog(){
     const dialogRef = this.dialog.open(AdduserComponent, {
+      width: '1050px',
+      height:'500px'
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+
+    });
+  }
+  editUser_dialog(){
+    const dialogRef = this.dialog.open(EdituserComponent, {
+      width: '1050px',
+      height:'500px'
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+
+    });
+  }
+  changePassword_dialog(){
+    const dialogRef = this.dialog.open(ChangepasswordComponent, {
+      width: '1050px',
+      height:'500px'
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+
+    });
+  }
+  deleteUser_dialog(){
+    const dialogRef = this.dialog.open(DeleteuserComponent, {
       width: '1050px',
       height:'500px'
     });

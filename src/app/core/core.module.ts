@@ -14,6 +14,9 @@ import { ResetPasswordComponent } from './components/reset-password/reset-passwo
 import { AdminComponent } from './components/admin/admin.component';
 import { SecureLocalStorageService } from './services/securels.service';
 import { AdduserComponent } from './components/admin/adduser/adduser.component';
+import { EdituserComponent } from './components/admin/edituser/edituser.component';
+import { DeleteuserComponent } from './components/admin/deleteuser/deleteuser.component';
+import { ChangepasswordComponent } from './components/admin/changepassword/changepassword.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +25,9 @@ import { AdduserComponent } from './components/admin/adduser/adduser.component';
     ResetPasswordComponent,
     AdminComponent,
     AdduserComponent,
+    EdituserComponent,
+    DeleteuserComponent,
+    ChangepasswordComponent,
    
   ],
   imports: [
