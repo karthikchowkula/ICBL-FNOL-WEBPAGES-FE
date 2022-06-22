@@ -1,6 +1,7 @@
 import { ApiService } from './../../../services/api.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormControlName, FormGroup, Validators } from '@angular/forms';
+import { TooltipPosition } from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-adduser',
@@ -8,6 +9,8 @@ import { FormBuilder, FormControl, FormControlName, FormGroup, Validators } from
   styleUrls: ['./adduser.component.scss']
 })
 export class AdduserComponent implements OnInit {
+  positionOptions: TooltipPosition[] = ['after', 'before', 'above', 'below', 'left', 'right'];
+  position = new FormControl(this.positionOptions[0]);
   adduserForm:FormGroup=this.fb.group({
    name: new FormControl('', [Validators.required]),
    email:new FormControl('',([Validators.required,Validators.email])),

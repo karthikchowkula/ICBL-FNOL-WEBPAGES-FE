@@ -31,6 +31,16 @@ body {
   letter-spacing: 0.5px;
 }
 
+
+  // resets
+  
+  .mat-error {
+    color: #f44336 !important;
+    font-size: 11px !important;
+    margin-top: 12px !important;
+    // padding-top: 15px !important;
+  }
+  
 .master-router-sec {
   background: red;
   min-height: 100vh;

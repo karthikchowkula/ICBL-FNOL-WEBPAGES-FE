@@ -1,27 +1,99 @@
-<form [formGroup]="adduserForm" id="form">
-    <mat-form-field class=""  >
+<!--add_user-->
+<section class="add_user_sec">
+  <div class="add_user">
+      <div class="wrapper">
+          <div fxLayout="row" fxLayout.xl="row" fxLayout.lg="row" fxLayout.md="row" fxLayout.sm="row"
+              fxLayout.xs="column" fxLayoutAlign="start stretch" fxLayoutGap="15px">
+              <div fxLayout="column" fxFlex.xl="100" fxFlex.lg="100" fxFlex.md="100" fxFlex.sm="100" fxFlex.xs="100" fxFlexFill>
+                <div class="admins_boxs">
+<div class="add_admins">
+                <div class="add">
+                  <p style="font-size: 16px;
+                  font-weight: 600;">Add User</p>
+
+                </div>
+                <div class="cross">
+                  <i style="font-size: 18px;" class="fa fa-times" aria-hidden="true"></i>
+
+                </div>
+              </div>
+              <!-- form_fields -->
+              <div class="form-section">
+                <div class="custom-form-group">
+                  <div class="custom-form-control">
+                    <!-- name -->
+                    <div class="name_data">
+                    <mat-label class="labels_sector">Name:</mat-label>
+                      <mat-form-field  appearance="outline">
+                        
+                        <input matInput placeholder="Pradeep kumar">
+                      </mat-form-field>
+                      </div>
+                      <!-- Email -->
+                    <div class="name_data">
+                      <mat-label class="labels_sector">Email:</mat-label>
+                        <mat-form-field  appearance="outline">
+                          
+                          <input matInput placeholder="Pradeep.padakanti@manomay.biz">
+                        </mat-form-field>
+                        </div>
+<!-- phone number -->
+<div class="name_data">
+  <mat-label class="labels_sector">Phone:</mat-label>
+  <mat-form-field  appearance="outline">
     
-      <input matInput  required formControlName="name" placeholder="Name">
-    </mat-form-field>
-    <mat-form-field class=""  >
-    
-        <input matInput  required formControlName="email" placeholder="Email">
-      </mat-form-field>
-      <mat-form-field class=""  >
-    
-        <input matInput  required  formControlName="name" placeholder="phonenumber">
-      </mat-form-field>
-      <mat-form-field class=""  >
-    
-        <input matInput required=" " formControlName="name" placeholder="password">
-      </mat-form-field>
-      <mat-form-field class=""  >
-    
-        <input matInput required=" " formControlName="name" placeholder="confirmpassword">
-      </mat-form-field>
-      <mat-radio-group>
-  <mat-radio-button class="example-radio-button" formControlName="role">
-    
-  </mat-radio-button>
-</mat-radio-group>
-   </form>
+    <mat-select [formControl]="position">
+      
+      <mat-option *ngFor="let positionOption of positionOptions" [value]="positionOption">
+        {{positionOption}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  </div>
+
+  <!-- inners_sector -->
+<div class="inners_sector">
+    <!-- name -->
+    <div class="name_data">
+      <mat-label class="labels_sector">Password:</mat-label>
+        <mat-form-field  appearance="outline">
+          
+          <input matInput placeholder="**************">
+        </mat-form-field>
+        </div>
+        <!-- Email -->
+      <div class="name_data">
+        <mat-label class="labels_sector">Confirm password:</mat-label>
+          <mat-form-field  appearance="outline">
+            
+            <input matInput placeholder="*************">
+          </mat-form-field>
+          </div>
+  
+<!-- clear btn -->
+<div class="clear_btn">
+<button class="clear_btn_btn" mat-button>Clear</button>
+</div>
+
+<!-- content -->
+<div class="content_data">
+  <p><i style="margin-right: 10px;" class="fa fa-circle" aria-hidden="true"></i>Password must contain 
+    3 lower case alphabetical characters,3 upper case 
+    alphabetical characters,1 numeric character,1 special character,
+     and minimum character is 12 characters.</p>
+   
+</div>
+
+
+
+
+</div>
+                   </div>
+                   </div>
+                   </div>
+              </div>
+              </div>
+      </div>
+              </div>
+  </div>
+</section>
