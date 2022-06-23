@@ -7,33 +7,56 @@ import {
   HttpInterceptor,
   HttpErrorResponse
 } from '@angular/common/http';
-import { catchError, Observable } from 'rxjs';
+import { catchError, Observable, throwError,switchMap } from 'rxjs';
 import { ApiService } from '../services/api.service';
+
+
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
+  isrefresh!:boolean;
 
 
   constructor(private apiservice:ApiService,private secure:SecureLocalStorageService) {}
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    
+ let accesstoken=this.secure.decrypt(localStorage.getItem("access_id")!)
+ if(!this.isrefresh){
+    if (accesstoken) {
+     request= request.clone({ setHeaders: { Authorization: `Bearer ${accesstoken}` } });
+    }
+  }
     return next.handle(request).pipe(
-      catchError(async (error: HttpErrorResponse) => {
-        if (error.status === 401) {
-          //this.handlerefreshtoken(request,next)
+      catchError(error => {
+        debugger
+        if (error instanceof HttpErrorResponse && error.status === 401) {
+          return this.handleAuthorizationError(request, next);
         } else {
-          
+          return throwError(error);
         }
       })
-    ) as any;
-  } 
-  handlerefreshtoken(request:HttpRequest<unknown>,next:HttpHandler){
-   let refreshtoken:string=localStorage.getItem('refresh_token')!
-   refreshtoken=this.secure.decrypt(refreshtoken)
-   this.apiservice.refreshToken(refreshtoken).subscribe(res=>{
-    console.log(res)
-  })
+    );
+  }
+  private handleAuthorizationError(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+    if (!this.isrefresh) {
+      debugger
+      this.isrefresh = true;
+      let refreshtoken=this.secure.decrypt(localStorage.getItem("refresh_token")!)
+     // I have created a route on my back-end to generate a new access token
+      return this.apiservice.refreshToken(refreshtoken).pipe(
+        switchMap((response:any) => {
+
+          debugger
+          console.log(response)
+          this.isrefresh=false
+          localStorage.setItem("access_id",this.secure.encrypt(response['access_token']))
+          request= request.clone({ setHeaders: { Authorization: `Bearer ${response['access_token']}` } });
+          return next.handle(request);
+        })
+      );
+    } else {
+      return next.handle(request);
+    }
   }
   }
 

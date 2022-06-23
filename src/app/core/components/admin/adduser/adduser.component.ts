@@ -1,7 +1,9 @@
+import { RoleService } from './../../../services/role.service';
 import { ApiService } from './../../../services/api.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormControlName, FormGroup, Validators } from '@angular/forms';
 import { TooltipPosition } from '@angular/material/tooltip';
+import { getRole } from '../../../Interfaces/getrole';
 
 @Component({
   selector: 'app-adduser',
@@ -19,12 +21,12 @@ export class AdduserComponent implements OnInit {
    confirmpassword:new FormControl('',[Validators.required,Validators.minLength(12)]),
    role:new FormControl('',Validators.required)
   })
-  constructor(private fb:FormBuilder,private apiservice:ApiService) { }
+  roleValues!:getRole[]
+  constructor(private fb:FormBuilder,private roleservice:RoleService) { }
 
   ngOnInit(): void {
-this.apiservice.getApp().subscribe(res=>{
-  console.log(res)
-})
+
+  this.roleValues=this.roleservice.roleValues
   }
 
 

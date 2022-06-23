@@ -21,8 +21,12 @@ const routes: Routes = [
   {path:'header_footer',component:HeaderFooterComponent},
   {path:'assitance_reqs_forms',component:AssistanceReqFormComponent},
   {path:'admin',component:AdminComponent},
+
   {path:'add_user',component:AdduserComponent},
   {path:'update_user',component:UpdateuserComponent},
+
+  {path:'adduser',component:AdduserComponent},
+
  
   
 ];
