@@ -1,0 +1,71 @@
+.edit_number_box{
+    width:50%;
+    margin:0 auto;
+    padding: 15px;
+    border: 1px solid red;
+
+}
+
+.edit_head h2{
+    font-size: 20px;
+    color: #000000;
+    font-weight: 700;
+}
+.labels_sector{
+    font-size: 14px;
+    font-weight: 600;
+    color: #990490;
+
+}
+
+.form-section{
+    margin-top: 0px;
+}
+.role_head h4{
+    color: purple;
+        font-size: 18px;
+        font-weight: 500;
+        
+    }
+    
+    .role_head{
+        margin: 10px 0px;
+    }
+    
+.radio_sector{
+    display: flex;
+    padding-left: 0px;
+    margin: 20px 0px;
+
+}
+.radio_sector li{
+    margin-right: 30px;
+    color: #000000;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.buttons_data{
+    display: flex;
+    justify-content: flex-end;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.cancel_btn{
+    border: 1px solid #000000 !important;
+    border-radius: 10px;
+    color: #000;
+    margin-right: 12px;
+
+}
+
+.add_btn{
+    border: 1px solid #3377FF !important;
+    border-radius: 10px;
+    background: #3377FF;
+   
+}
