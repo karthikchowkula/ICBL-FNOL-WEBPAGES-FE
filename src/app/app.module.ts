@@ -14,9 +14,11 @@ import { RouterModule } from '@angular/router';
 import { SecureLocalStorageService } from './core/services/securels.service';
 import {NativeDateAdapter, DateAdapter, MAT_DATE_FORMATS} from '@angular/material/core';
 import { AuthInterceptor } from './core/Interceptors/auth.interceptor';
+import { FlexLayoutModule } from '@angular/flex-layout';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+
   
   ],
   imports: [
@@ -26,7 +28,9 @@ import { AuthInterceptor } from './core/Interceptors/auth.interceptor';
     CoreModule,
     BrowserAnimationsModule,
     NgbModule,
-    RouterModule,HttpClientModule
+    RouterModule,
+    HttpClientModule,
+    FlexLayoutModule,
     
     
     

@@ -2,23 +2,20 @@
 <section class="add_user_sec">
   <div class="add_user">
       <div class="wrapper">
+        <div class="sure_number">
           <div fxLayout="row" fxLayout.xl="row" fxLayout.lg="row" fxLayout.md="row" fxLayout.sm="row"
-              fxLayout.xs="column" fxLayoutAlign="start stretch" fxLayoutGap="15px">
-              <div fxLayout="column" fxFlex.xl="100" fxFlex.lg="100" fxFlex.md="100" fxFlex.sm="100" fxFlex.xs="100" fxFlexFill>
-                <div class="admins_boxs">
-<div class="add_admins">
-                <div class="add">
-                  <p style="font-size: 16px;
-                  font-weight: 600;">Add User</p>
+              fxLayout.xs="column" fxLayoutAlign="start stretch" fxLayoutGap="0px">
+              <div class="add">
+                <h3>Add User</h3>
 
-                </div>
-                <div class="cross">
-                  <i style="font-size: 18px;" class="fa fa-times" aria-hidden="true"></i>
-
-                </div>
               </div>
-              <!-- form_fields -->
-              <div class="form-section">
+
+          </div>
+          <div fxLayout="row" fxLayout.xl="row" fxLayout.lg="row" fxLayout.md="row" fxLayout.sm="row"
+              fxLayout.xs="column" fxLayoutAlign="start stretch" fxLayoutGap="0px">
+<!-- name -->
+              <div fxLayout="column" fxFlex.xl="50" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" fxFlex.xs="100" fxFlexFill>
+<div class="form-section">
                 <div class="custom-form-group">
                   <div class="custom-form-control">
                     <!-- name -->
@@ -28,72 +25,146 @@
                         
                         <input matInput placeholder="Pradeep kumar">
                       </mat-form-field>
+                      <p class="good_sen">You are good to go!</p>
                       </div>
-                      <!-- Email -->
-                    <div class="name_data">
-                      <mat-label class="labels_sector">Email:</mat-label>
+                
+                </div>
+                </div>
+                </div>
+                </div>
+
+<!-- email -->
+<div fxLayout="column" fxFlex.xl="50" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" fxFlex.xs="100" fxFlexFill>
+  <div class="form-section">
+                  <div class="custom-form-group">
+                    <div class="custom-form-control">
+                      <div class="name_data">
+                        <mat-label class="labels_sector">Email:</mat-label>
+                          <mat-form-field  appearance="outline">
+                            
+                            <input matInput placeholder="Pradeep.padakanti@manomay.biz">
+                          </mat-form-field>
+                          <p class="good_sen">You are good to go!</p>
+                          </div>
+                          </div>
+                          </div>
+                          </div>
+                          </div>
+          </div>
+          <div fxLayout="row" fxLayout.xl="row" fxLayout.lg="row" fxLayout.md="row" fxLayout.sm="row"
+          fxLayout.xs="column" fxLayoutAlign="start stretch" fxLayoutGap="0px">
+<!-- phone number -->
+<div fxLayout="column" fxFlex.xl="50" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" fxFlex.xs="100" fxFlexFill>
+  <div class="form-section">
+                  <div class="custom-form-group">
+                    <div class="custom-form-control">
+
+                      <div class="name_data">
+                        <mat-label class="labels_sector">Phone:</mat-label>
                         <mat-form-field  appearance="outline">
                           
-                          <input matInput placeholder="Pradeep.padakanti@manomay.biz">
+                          <mat-select [formControl]="position">
+                            
+                            <mat-option *ngFor="let positionOption of positionOptions" [value]="positionOption">
+                              {{positionOption}}
+                            </mat-option>
+                          </mat-select>
                         </mat-form-field>
+                        <p class="good_sen">You are good to go!</p>
                         </div>
-<!-- phone number -->
-<div class="name_data">
-  <mat-label class="labels_sector">Phone:</mat-label>
-  <mat-form-field  appearance="outline">
-    
-    <mat-select [formControl]="position">
-      
-      <mat-option *ngFor="let positionOption of positionOptions" [value]="positionOption">
-        {{positionOption}}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
-  </div>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
 
-  <!-- inners_sector -->
-<div class="inners_sector">
-    <!-- name -->
-    <div class="name_data">
-      <mat-label class="labels_sector">Password:</mat-label>
-        <mat-form-field  appearance="outline">
-          
-          <input matInput placeholder="**************">
-        </mat-form-field>
-        </div>
-        <!-- Email -->
-      <div class="name_data">
-        <mat-label class="labels_sector">Confirm password:</mat-label>
-          <mat-form-field  appearance="outline">
-            
-            <input matInput placeholder="*************">
-          </mat-form-field>
-          </div>
+<!-- empty -->
+<div fxLayout="column" fxFlex.xl="50" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" fxFlex.xs="100" fxFlexFill>
   
-<!-- clear btn -->
-<div class="clear_btn">
-<button class="clear_btn_btn" mat-button>Clear</button>
 </div>
-
-<!-- content -->
-<div class="content_data">
-  <p><i style="margin-right: 10px;" class="fa fa-circle" aria-hidden="true"></i>Password must contain 
-    3 lower case alphabetical characters,3 upper case 
-    alphabetical characters,1 numeric character,1 special character,
-     and minimum character is 12 characters.</p>
-   
-</div>
-
-
-
-
-</div>
-                   </div>
-                   </div>
-                   </div>
-              </div>
-              </div>
+          </div>
+          <div fxLayout="row" fxLayout.xl="row" fxLayout.lg="row" fxLayout.md="row" fxLayout.sm="row"
+              fxLayout.xs="column" fxLayoutAlign="start stretch" fxLayoutGap="0px">
+<!-- password -->
+<div fxLayout="column" fxFlex.xl="50" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" fxFlex.xs="100" fxFlexFill>
+  <div class="form-section">
+    <div class="custom-form-group">
+      <div class="custom-form-control">
+ 
+  <div class="name_data">
+    <mat-label class="labels_sector">Password:</mat-label>
+      <mat-form-field  appearance="outline">
+        
+        <input matInput placeholder="**************">
+      </mat-form-field>
+      <p class="good_sen">Your Password is Strong</p>
       </div>
+</div>
+</div>
+</div>
+</div>
+<!-- confirm password -->
+<div fxLayout="column" fxFlex.xl="50" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" fxFlex.xs="100" fxFlexFill>
+
+  <div class="form-section">
+    <div class="custom-form-group">
+      <div class="custom-form-control">
+
+  <div class="name_data">
+    <mat-label class="labels_sector">Confirm password:</mat-label>
+      <mat-form-field  appearance="outline">
+        
+        <input matInput placeholder="*************">
+      </mat-form-field>
+      <p class="good_sen">Password matches</p>
+      </div>
+      </div>
+      </div>
+      </div>
+</div>
+</div>
+<!-- role -->
+<div fxLayout="row" fxLayout.xl="row" fxLayout.lg="row" fxLayout.md="row" fxLayout.sm="row"
+              fxLayout.xs="column" fxLayoutAlign="start stretch" fxLayoutGap="0px">
+              <div fxLayout="column" fxFlex.xl="100" fxFlex.lg="100" fxFlex.md="100" fxFlex.sm="100" fxFlex.xs="100" fxFlexFill>
+              <div class="role_head">
+                <h4>Role</h4>
               </div>
-  </div>
-</section>
+
+              <ul class="radio_sector">
+                <li> <mat-radio-button value="1">Agent App</mat-radio-button></li>
+                <li>   <mat-radio-button value="2">CC</mat-radio-button></li>
+                <li><mat-radio-button value="1">CM</mat-radio-button></li>
+                <li><mat-radio-button value="2">Agent Manager</mat-radio-button></li>
+               
+              </ul>
+
+
+              </div>
+
+
+              </div>
+
+
+              <div fxLayout="row" fxLayout.xl="row" fxLayout.lg="row" fxLayout.md="row" fxLayout.sm="row"
+              fxLayout.xs="column" fxLayoutAlign="start stretch" fxLayoutGap="0px">
+              <div fxLayout="column" fxFlex.xl="100" fxFlex.lg="100" fxFlex.md="100" fxFlex.sm="100" fxFlex.xs="100" fxFlexFill>
+                <ul class="buttons_data">
+                  <li ><button class="cancel_btn" mat-button>Cancel</button></li>
+                  <li><button class="add_btn"  mat-button>Add User</button></li>
+
+
+                </ul>
+
+                </div>
+                </div>
+                
+
+
+
+
+
+                </div>
+                </div>
+                </div>
+               
+                </section>

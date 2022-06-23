@@ -36,15 +36,15 @@
 // pradeep css
 .forms_box{
   // border: 1px solid whitesmoke;
-  width: 35%;
-  margin: 0 auto;
-  margin-top: 8%;
-  padding: 15px;
+  width: 100%;
+  // margin: 0 auto;
+  margin-top: 4%;
+  // padding: 15px;
 
 }
 
 .data_text{
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
   color: #000000;
 
@@ -52,11 +52,13 @@
 
 
 .login_btn{
-  border:1px solid purple;
-  border-radius: 20px;
-  color: #000000;
+  border: 1px solid purple;
+  border-radius: 8px;
+  color: #ffffff;
   font-size: 13px;
   font-weight: 600;
+  width: 160px;
+  background: #990490;
 
 
 }
@@ -74,9 +76,74 @@
 .forgot_text{
   font-size: 12px;
   font-weight: 700;
-  color: #000000;
+  color: #B259AD;
 }
 
 .space_data{
   margin-top:10px;
+}
+
+.column_sector_right{
+  // border:1px solid red;
+}
+
+.column_sector_left{
+  // border:1px solid green;
+  background-image: url('../../../../assets/images/bg_logo.png');
+ background-repeat: no-repeat;
+  background-size:100% 100%;
+  padding: 20px;
+  min-height: 80vh;
+}
+.column_sector_right{
+  padding: 20px;
+}
+.logo_left_mainbox{
+
+}
+
+.middle_img{
+  text-align: center;
+  padding: 50px 0px;
+}
+
+.middle_img img{
+  width:250px;
+  height:250px;
+
+}
+
+.top_data{
+  padding: 50px 0px;
+}
+
+.norms{
+  color: #990490;
+    // text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+// .mat-form-field-appearance-fill .mat-form-field-flex{
+//   background-color:red !important;
+// }
+
+.forgot{
+  margin:15px 0px;
+}
+
+.mat-form-field-underline{
+  position:relative !important;
+  bottom: 0px !important;
+}
+.mat-form-field{
+  background-color: #ffffff !important;
+}
+
+.mat-form-field-infix {
+  padding: 0.4em 0 2.0em 0 !important;
+}
+
+.welcome_norms{
+  margin-top: 20px;
 }

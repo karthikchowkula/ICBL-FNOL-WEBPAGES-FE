@@ -1,6 +1,6 @@
 
 <!--Header Section-->
-<section class="header_sec">
+<!-- <section class="header_sec">
   <div class="header_main">
       <div class="wrapper">
           <div class="" fxLayout="row" fxLayout.xl="row" fxLayout.lg="row" fxLayout.md="row" fxLayout.sm="row"
@@ -15,14 +15,32 @@
           </div>
       </div>
   </div>
-</section>
+</section> -->
 <!-- Login Form Section-->
-<section class="">
-  <div class="">
+<section class="login_sec">
+  <div class="top_data">
       <div class="wrapper">
-          <div class="" fxLayout="row" fxLayout.xl="row" fxLayout.lg="row" fxLayout.md="row" fxLayout.sm="row"
-              fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutGap="15px">
-              <div fxLayout="column" fxFlex.xl="100" fxFlex.lg="100" fxFlex.md="100" fxFlex.sm="100" fxFlex.xs="100" fxFlexFill>
+          <div class="row_login" fxLayout="row" fxLayout.xl="row" fxLayout.lg="row" fxLayout.md="row" fxLayout.sm="row"
+              fxLayout.xs="column" fxLayoutAlign="start start" fxLayoutGap="80px">
+              <div class="column_sector_left" fxFlex.xl="50" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" fxFlex.xs="100" fxFlexFill>
+              <div class="logo_left_mainbox">
+                <div class="logo_img">
+                <img src="../../../../assets/images/top_logo.png">
+
+</div>
+
+<div class="middle_img">
+  <img src="../../../../assets/images/main_login_img.png">
+
+</div>
+
+              </div>
+                </div>
+
+              <div class="column_sector_right" fxFlex.xl="50" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" fxFlex.xs="100" fxFlexFill>
+                <div class="welcome_norms">
+                  <h3 class="norms">Welcome to OmniPlus</h3>
+                </div>
                 <div class="forms_box">
                   <div class="form-section">
                     <div class="custom-form-group">
@@ -54,12 +72,13 @@
                             <mat-error *ngIf="this.loginForm.get('password')?.hasError('minlength')">Password length must be min 12 digits</mat-error>
                             
                             </mat-form-field>
-                            <div class="login">
-                            <button mat-raised-button class="login_btn" type="submit" >Log In</button>
-                            </div>
+                           
                             <div class="forgot">
-                            <p class="forgot_text" (click)="forgotpassword()">Forgot Password</p>
+                            <p class="forgot_text" (click)="forgotpassword()">Forgot Password?</p>
                             </div>
+                            <div class="login">
+                              <button mat-raised-button class="login_btn" type="submit">Login</button>
+                              </div>
                             </form>
                       </div>
                     </div>
