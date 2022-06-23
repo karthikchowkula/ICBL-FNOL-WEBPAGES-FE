@@ -16,11 +16,12 @@ import { SecureLocalStorageService } from './services/securels.service';
 import { AdduserComponent } from './components/admin/adduser/adduser.component';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { UpdateuserComponent } from './components/admin/updateuser/updateuser.component';
+
 
 import { EdituserComponent } from './components/admin/edituser/edituser.component';
 import { DeleteuserComponent } from './components/admin/deleteuser/deleteuser.component';
 import { ChangepasswordComponent } from './components/admin/changepassword/changepassword.component';
+import { ForgotPasswordComponent } from './components/admin/forgot-password/forgot-password.component';
 
 
 @NgModule({
@@ -31,11 +32,12 @@ import { ChangepasswordComponent } from './components/admin/changepassword/chang
     AdminComponent,
     AdduserComponent,
 
-    UpdateuserComponent,
+    
 
     EdituserComponent,
     DeleteuserComponent,
     ChangepasswordComponent,
+    ForgotPasswordComponent,
 
    
   ],

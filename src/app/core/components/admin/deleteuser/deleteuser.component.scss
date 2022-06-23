@@ -1,0 +1,78 @@
+.edit_number_box{
+    width:50%;
+    margin:0 auto;
+    padding: 15px;
+    border: 1px solid red;
+
+}
+.edit_head h2{
+    font-size: 20px;
+    color: #000000;
+    font-weight: 700;
+}
+
+.h3{
+    margin-bottom: 0px !important;
+}
+
+.name{
+    color: purple;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+.head_three{
+    color: #666666;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.name_box{
+    // border: 1px solid red;
+    padding: 10px;
+    box-shadow:X0 Y4 B10 S0 #000000 18%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.18);
+    margin-bottom: 6px;
+}
+
+.records_one{
+    font-size: 15px;
+    font-weight: 500;
+    color: red;
+    margin: 15px 0px;
+
+}
+
+.records_two{
+    color: #666666;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.buttons_data{
+    display: flex;
+    justify-content: flex-end;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.cancel_btn{
+    border: 1px solid #000000 !important;
+    border-radius: 10px;
+    color: #000;
+    margin-right: 12px;
+
+}
+
+.add_btn{
+    border: 1px solid #FF3333 !important;
+    border-radius: 10px;
+    background: #FF3333;
+   
+}

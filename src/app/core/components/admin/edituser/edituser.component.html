@@ -1,4 +1,4 @@
-<form [formGroup]="edituserForm" id="form">
+<!-- <form [formGroup]="edituserForm" id="form">
     <mat-form-field class="" pearance="outline">
     
         <input matInput  formControlName="username"  placeholder="abc@gmail.com">
@@ -21,4 +21,147 @@
         {{role}}
       </mat-radio-button>
     </mat-radio-group>
-   </form>
+   </form> -->
+<!--add_user-->
+
+<section class="edit_user_sec">
+  <div class="edit_user">
+    <div class="wrapper">
+      <div class="edit_number_box">
+        <div fxLayout="row" fxLayout.xl="row" fxLayout.lg="row" fxLayout.md="row" fxLayout.sm="row" fxLayout.xs="column"
+          fxLayoutAlign="start stretch" fxLayoutGap="0px">
+          <div fxLayout="column" fxFlex.xl="100" fxFlex.lg="100" fxFlex.md="100" fxFlex.sm="100" fxFlex.xs="100"
+            fxFlexFill>
+            <div class="edit_head">
+              <h2>Update User</h2>
+
+            </div>
+          </div>
+        </div>
+        <!-- 1 -->
+        <div fxLayout="row" fxLayout.xl="row" fxLayout.lg="row" fxLayout.md="row" fxLayout.sm="row" fxLayout.xs="column"
+          fxLayoutAlign="start stretch" fxLayoutGap="0px">
+          <div fxLayout="column" fxFlex.xl="50" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" fxFlex.xs="100" fxFlexFill>
+            <div class="form-section">
+              <div class="custom-form-group">
+                <div class="custom-form-control">
+                  <!-- name -->
+                  <div class="name_data">
+                    <mat-label class="labels_sector">Username:</mat-label>
+                    <mat-form-field appearance="outline">
+
+                      <input matInput placeholder="Pradeep kumar">
+                    </mat-form-field>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div fxLayout="column" fxFlex.xl="50" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" fxFlex.xs="100" fxFlexFill>
+
+          </div>
+
+        </div>
+        <!-- 2 -->
+        <div fxLayout="row" fxLayout.xl="row" fxLayout.lg="row" fxLayout.md="row" fxLayout.sm="row" fxLayout.xs="column"
+          fxLayoutAlign="start stretch" fxLayoutGap="0px">
+          <div fxLayout="column" fxFlex.xl="50" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" fxFlex.xs="100" fxFlexFill>
+            <div class="form-section">
+              <div class="custom-form-group">
+                <div class="custom-form-control">
+                  <!-- name -->
+                  <div class="name_data">
+                    <mat-label class="labels_sector">Email:</mat-label>
+                    <mat-form-field appearance="outline">
+
+                      <input matInput placeholder="pradeep.padakanti@manomay.biz">
+                    </mat-form-field>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div fxLayout="column" fxFlex.xl="50" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" fxFlex.xs="100" fxFlexFill>
+
+          </div>
+
+        </div>
+        <!-- 3 -->
+        <div fxLayout="row" fxLayout.xl="row" fxLayout.lg="row" fxLayout.md="row" fxLayout.sm="row" fxLayout.xs="column"
+          fxLayoutAlign="start stretch" fxLayoutGap="0px">
+          <div fxLayout="column" fxFlex.xl="50" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" fxFlex.xs="100" fxFlexFill>
+            <div class="form-section">
+              <div class="custom-form-group">
+                <div class="custom-form-control">
+                  <!-- name -->
+                  <div class="name_data">
+                    <mat-label class="labels_sector">phonenumber:</mat-label>
+                    <mat-form-field appearance="outline">
+
+                      <input matInput placeholder="phonenumber">
+                    </mat-form-field>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div fxLayout="column" fxFlex.xl="50" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" fxFlex.xs="100" fxFlexFill>
+
+          </div>
+
+        </div>
+
+        <!-- application -->
+         <!-- role -->
+         <div fxLayout="row" fxLayout.xl="row" fxLayout.lg="row" fxLayout.md="row" fxLayout.sm="row" fxLayout.xs="column"
+         fxLayoutAlign="start stretch" fxLayoutGap="0px">
+         <div fxLayout="column" fxFlex.xl="100" fxFlex.lg="100" fxFlex.md="100" fxFlex.sm="100" fxFlex.xs="100"
+           fxFlexFill>
+           <div class="role_head">
+             <h4>Application</h4>
+           </div>
+
+           <ul class="radio_sector">
+             <li>
+               <mat-radio-button value="1">Agent App</mat-radio-button>
+             </li>
+             <li>
+               <mat-radio-button value="2">CC</mat-radio-button>
+             </li>
+             <li>
+               <mat-radio-button value="1">CM</mat-radio-button>
+             </li>
+             <li>
+               <mat-radio-button value="2">Agent Manager</mat-radio-button>
+             </li>
+
+           </ul>
+
+         </div>
+
+       </div>
+       <div fxLayout="row" fxLayout.xl="row" fxLayout.lg="row" fxLayout.md="row" fxLayout.sm="row" fxLayout.xs="column"
+       fxLayoutAlign="start stretch" fxLayoutGap="0px">
+       <div fxLayout="column" fxFlex.xl="100" fxFlex.lg="100" fxFlex.md="100" fxFlex.sm="100" fxFlex.xs="100"
+         fxFlexFill>
+         <ul class="buttons_data">
+           <li><button class="cancel_btn" mat-button>Cancel</button></li>
+           <li><button class="add_btn" mat-button>Add User</button></li>
+
+         </ul>
+
+       </div>
+     </div>
+      </div>
+    </div>
+  </div>
+</section>
