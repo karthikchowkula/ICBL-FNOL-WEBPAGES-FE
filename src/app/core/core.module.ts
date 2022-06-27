@@ -22,6 +22,8 @@ import { EdituserComponent } from './components/admin/edituser/edituser.componen
 import { DeleteuserComponent } from './components/admin/deleteuser/deleteuser.component';
 import { ChangepasswordComponent } from './components/admin/changepassword/changepassword.component';
 import { ForgotPasswordComponent } from './components/admin/forgot-password/forgot-password.component';
+import { NewPasswordComponent } from './components/admin/new-password/new-password.component';
+import { OtpComponent } from './components/admin/otp/otp.component';
 
 
 @NgModule({
@@ -38,6 +40,8 @@ import { ForgotPasswordComponent } from './components/admin/forgot-password/forg
     DeleteuserComponent,
     ChangepasswordComponent,
     ForgotPasswordComponent,
+    NewPasswordComponent,
+    OtpComponent,
 
    
   ],
