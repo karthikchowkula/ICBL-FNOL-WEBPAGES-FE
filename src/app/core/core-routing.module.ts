@@ -12,6 +12,8 @@ import { ChangepasswordComponent } from './components/admin/changepassword/chang
 import { ForgotPasswordComponent } from './components/admin/forgot-password/forgot-password.component';
 import { NewPasswordComponent } from './components/admin/new-password/new-password.component';
 import { OtpComponent } from './components/admin/otp/otp.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
+import { TaskComponent } from './components/task/task.component';
 
 const routes: Routes = [
 {path:'login',component:LoginComponent},
@@ -29,6 +31,8 @@ path:'',component:LoginComponent
 {path:'forgot_password',component:ForgotPasswordComponent},
 {path:'new_password',component:NewPasswordComponent}, 
 {path:'otp',component:OtpComponent}, 
+{path:'home_page',component:HomePageComponent}, 
+{path:'task_page',component:TaskComponent}, 
 
 
 ];

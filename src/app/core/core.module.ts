@@ -24,6 +24,10 @@ import { ChangepasswordComponent } from './components/admin/changepassword/chang
 import { ForgotPasswordComponent } from './components/admin/forgot-password/forgot-password.component';
 import { NewPasswordComponent } from './components/admin/new-password/new-password.component';
 import { OtpComponent } from './components/admin/otp/otp.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
+import { MatOptgroup, MatOption } from '@angular/material/core';
+import { matSelectAnimations } from '@angular/material/select';
+import { TaskComponent } from './components/task/task.component';
 
 
 @NgModule({
@@ -42,6 +46,8 @@ import { OtpComponent } from './components/admin/otp/otp.component';
     ForgotPasswordComponent,
     NewPasswordComponent,
     OtpComponent,
+    HomePageComponent,
+    TaskComponent,
 
    
   ],
@@ -55,6 +61,13 @@ import { OtpComponent } from './components/admin/otp/otp.component';
     ReactiveFormsModule,
     HttpClientModule,
     FlexLayoutModule,
+    MatFormFieldModule,
+    
+    
+    
+    
+   
+    
 
   ],
 

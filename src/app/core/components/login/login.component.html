@@ -1,4 +1,3 @@
-
 <!--Header Section-->
 <!-- <section class="header_sec">
   <div class="header_main">
@@ -19,89 +18,84 @@
 <!-- Login Form Section-->
 <section class="login_sec">
   <div class="top_data">
-      <div class="wrapper">
-          <div class="row_login" fxLayout="row" fxLayout.xl="row" fxLayout.lg="row" fxLayout.md="row" fxLayout.sm="row"
-              fxLayout.xs="column" fxLayoutAlign="start start" fxLayoutGap="80px">
-              <div class="column_sector_left" fxFlex.xl="50" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" fxFlex.xs="100" fxFlexFill>
-              <div class="logo_left_mainbox">
-                <div class="logo_img">
-                <img src="../../../../assets/images/top_logo.png">
+    <div class="wrapper">
+      <div class="row_login" fxLayout="row" fxLayout.xl="row" fxLayout.lg="row" fxLayout.md="row" fxLayout.sm="row"
+        fxLayout.xs="column" fxLayoutAlign="start start" fxLayoutGap="80px">
+        <div class="column_sector_left" fxFlex.xl="50" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" fxFlex.xs="100"
+          fxFlexFill>
+          <div class="logo_left_mainbox">
+            <div class="logo_img">
+              <img src="../../../../assets/images/top_logo.png">
 
-</div>
+            </div>
 
-<div class="middle_img">
-  <img src="../../../../assets/images/main_login_img.png">
+            <div class="middle_img">
+              <img src="../../../../assets/images/main_login_img.png">
 
-</div>
+            </div>
 
-              </div>
-                </div>
-
-              <div class="column_sector_right" fxFlex.xl="50" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" fxFlex.xs="100" fxFlexFill>
-                <div class="welcome_norms">
-                  <h3 class="norms">Welcome to OmniPlus</h3>
-                </div>
-                <div class="forms_box">
-                  <div class="form-section">
-                    <div class="custom-form-group">
-                      <div class="custom-form-control">
-                       
-                          <form [formGroup]="loginForm" id="form"(ngSubmit)="loginSubmit()">
-                           <mat-label class="data_text">Email *</mat-label>
-                            <mat-form-field style="margin-bottom:12px;" appearance="outline">
-                         
-                        
-                            <input type="email" matInput formControlName="email"
-                            placeholder="user@gmail.com" required>
-                            
-                            <mat-error *ngIf="this.loginForm.get('email')?.hasError('required')">Please enter email to proceed</mat-error>
-                            
-                            <mat-error *ngIf="this.loginForm.get('email')?.hasError('email')">Please enter valid email</mat-error>
-                            
-                            
-                            
-                            </mat-form-field>
-                            <mat-label class="data_text space_data">Password *</mat-label>
-                            <mat-form-field  appearance="outline">
-                           
-                            
-                            <input matInput type="password" placeholder="password" formControlName="password" required>
-                            
-                            <mat-error *ngIf="this.loginForm.get('password')?.hasError('required')">Please enter password to proceed</mat-error>
-                            
-                            <mat-error *ngIf="this.loginForm.get('password')?.hasError('minlength')">Password length must be min 12 digits</mat-error>
-                            
-                            </mat-form-field>
-                           
-                            <div class="forgot">
-                            <p class="forgot_text" (click)="forgotpassword()">Forgot Password?</p>
-                            </div>
-                            <div class="login">
-                              <button mat-raised-button class="login_btn" type="submit">Login</button>
-                              </div>
-                            </form>
-                      </div>
-                    </div>
-
-                  </div>
-
-    
-
-
-
-                </div>
-              </div>
           </div>
+        </div>
+
+        <div class="column_sector_right" fxFlex.xl="50" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" fxFlex.xs="100"
+          fxFlexFill>
+          <div class="welcome_norms">
+            <h3 class="norms">Welcome to OmniPlus</h3>
+          </div>
+          <div class="forms_box">
+            <div class="form-section">
+              <div class="custom-form-group">
+                <div class="custom-form-control">
+
+                  <form [formGroup]="loginForm" id="form" (ngSubmit)="loginSubmit()">
+                    <mat-label class="data_text">Email *</mat-label>
+                    <mat-form-field style="margin-bottom:12px;" appearance="outline">
+
+
+                      <input type="email" matInput formControlName="email" placeholder="user@gmail.com" required>
+
+                      <mat-error *ngIf="this.loginForm.get('email')?.hasError('required')">Please enter email to proceed
+                      </mat-error>
+
+                      <mat-error *ngIf="this.loginForm.get('email')?.hasError('email')">Please enter valid email
+                      </mat-error>
+
+
+
+                    </mat-form-field>
+                    <mat-label class="data_text space_data">Password *</mat-label>
+                    <mat-form-field appearance="outline">
+
+
+                      <input matInput type="password" placeholder="password" formControlName="password" required>
+
+                      <mat-error *ngIf="this.loginForm.get('password')?.hasError('required')">Please enter password to
+                        proceed</mat-error>
+
+                      <mat-error *ngIf="this.loginForm.get('password')?.hasError('minlength')">Password length must be
+                        min 12 digits</mat-error>
+
+                    </mat-form-field>
+
+                    <div class="forgot">
+                      <p class="forgot_text" (click)="forgotpassword()">Forgot Password?</p>
+                    </div>
+                    <div class="login">
+                      <button mat-raised-button class="login_btn" type="submit">Login</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+            </div>
+
+
+
+
+
+          </div>
+        </div>
       </div>
+    </div>
   </div>
 </section>
-
-
-
-      
-      
-       
-
-
-
-

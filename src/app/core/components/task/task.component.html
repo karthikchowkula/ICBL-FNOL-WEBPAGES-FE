@@ -1,0 +1,42 @@
+<!--Header Section-->
+<section class="header_sec">
+    <div class="headere_maine">
+        <div class="wrapper">
+            <div class="" fxLayout="row" fxLayout.xl="row" fxLayout.lg="row" fxLayout.md="row" fxLayout.sm="row"
+                fxLayout.xs="column" fxLayoutAlign="start stretch" fxLayoutGap="15px">
+                <!-- 1 -->
+                <div fxLayout="column" fxFlex.xl="33" fxFlex.lg="33" fxFlex.md="33" fxFlex.sm="33" fxFlex.xs="100"
+                    fxFlexFill>
+                    <div class="">
+                        <h4>Basic mat-select</h4>
+                        <mat-form-field appearance="fill">
+                          <mat-label>Favorite food</mat-label>
+                          <mat-select>
+                            <mat-option *ngFor="let food of foods" [value]="food.value">
+                              {{food.viewValue}}
+                            </mat-option>
+                          </mat-select>
+                        </mat-form-field>
+                        
+                          
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div fxLayout="column" fxFlex.xl="33" fxFlex.lg="33" fxFlex.md="33" fxFlex.sm="33" fxFlex.xs="100"
+                fxFlexFill>
+                <div class="">
+
+                </div>
+            </div>
+            <!-- 3 -->
+            <div fxLayout="column" fxFlex.xl="33" fxFlex.lg="33" fxFlex.md="33" fxFlex.sm="33" fxFlex.xs="100"
+            fxFlexFill>
+            <div class="">
+
+            </div>
+        </div>
+               
+            </div>
+        </div>
+    </div>
+</section>
