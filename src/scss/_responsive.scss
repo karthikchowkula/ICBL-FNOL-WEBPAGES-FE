@@ -14,8 +14,7 @@ $breakpoint-xxl: "screen and (min-width: 1370px)";
 }
 /* ------------------ MOBILE-PHONES-VERTICAL-HORIZONTAL ------------------ */
 @media #{$breakpoint-xs-sm} {
-
-  // MOBILE-MENU-SCSS
+// MOBILE-MENU-SCSS
   .master_navbar_sec {
     position: relative;
     z-index: 99;
