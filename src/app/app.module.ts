@@ -16,34 +16,31 @@ import {NativeDateAdapter, DateAdapter, MAT_DATE_FORMATS} from '@angular/materia
 import { AuthInterceptor } from './core/Interceptors/auth.interceptor';
 import { FlexLayoutModule } from '@angular/flex-layout';
 @NgModule({
-  declarations: [
-    AppComponent,
+declarations: [
+AppComponent,
 
-  
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    MaterialModule,
-    CoreModule,
-    BrowserAnimationsModule,
-    NgbModule,
-    RouterModule,
-    HttpClientModule,
-    FlexLayoutModule,
-    
-    
-    
-  ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: [{provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher},
-    AuthenticationServiceService,SecureLocalStorageService,
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: AuthInterceptor,
-      multi: true
-  }  
-  ],
-  bootstrap: [AppComponent]
+],
+imports: [
+BrowserModule,
+AppRoutingModule,
+MaterialModule,
+CoreModule,
+BrowserAnimationsModule,
+NgbModule,
+RouterModule,
+HttpClientModule,
+FlexLayoutModule,
+
+],
+schemas: [CUSTOM_ELEMENTS_SCHEMA],
+providers: [{provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher},
+AuthenticationServiceService,SecureLocalStorageService,
+{
+provide: HTTP_INTERCEPTORS,
+useClass: AuthInterceptor,
+multi: true
+}
+],
+bootstrap: [AppComponent]
 })
 export class AppModule { }

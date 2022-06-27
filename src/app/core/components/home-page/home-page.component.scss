@@ -1,0 +1,108 @@
+.smart_data{
+    text-align: center;
+    align-items: center;
+
+}
+
+.smart_data h2{
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.header_mains_num{
+    background: #990490;
+}
+
+.logout_last{
+    display: flex;
+    justify-content: flex-end;
+    color: #ffffff;
+}
+
+.number_section{
+    display: flex;
+}
+
+.icon_number{
+
+}
+
+.current_data{
+   border: 1px solid #990490; 
+   color: #990490;
+   margin-right: 15px;
+   font-size: 14px;
+   font-weight: 600;
+}
+
+.number_section{
+    margin: 15px 0px;
+}
+
+.numbers_sections{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 20px 0px;
+
+}
+
+.ones{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  
+    border-bottom: 1px solid #000000;
+    
+}
+
+.agent-datas{
+    font-size: 14px;
+    font-weight: 600;
+    color: #333333;
+}
+
+.agent_box{
+//   border: 1px solid red;  
+  width: 18%;
+  padding: 10px;
+  background: whitesmoke;
+  border-radius: 5px;
+
+}
+
+p{
+    margin-bottom: 3px;
+}
+
+.colorss{
+    color:red;
+
+}
+
+.color_green{
+    color: green;
+}
+
+.agents_boxs{
+    // border: 1px solid red;
+    width: 18%;
+    padding: 10px;
+    background: whitesmoke;
+    border-radius: 5px;
+    position: absolute;
+    right: 80px;
+    top: 137px;
+}
+
+.map_sec{
+    position: relative;
+
+}
+
+.agent_box{
+    position: absolute;
+    left: 78px;
+    top: 140px;
+}
