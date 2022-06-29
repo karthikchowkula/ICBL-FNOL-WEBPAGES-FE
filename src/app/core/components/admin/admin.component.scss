@@ -5,7 +5,7 @@
     justify-content: space-between;
     width: 100%;
     padding: 15px;
-    background: purple;
+    // background: purple;
     color: white;
 }
 
@@ -30,7 +30,10 @@
     margin-top: 8px;
 
 }
-
+.log_out{
+    display: flex;
+    justify-content: flex-end;
+}
 table {
     width: 100%;
 }
@@ -48,7 +51,7 @@ table {
 
     font-size: 22px;
     font-weight: 700;
-    color: purple;
+    color: #ffffff;
     margin-bottom: 0px;
 
 }
@@ -73,4 +76,8 @@ table {
     justify-content: space-between;
     width: 100%;
     align-items: center;
+}
+
+.user_head{
+    text-align: center;
 }

@@ -17,7 +17,7 @@ import { ElementSchemaRegistry } from '@angular/compiler';
 import { MatSelectModule } from '@angular/material/select';
 import { TaskComponent } from './task/task.component';
 
-import { ChangepasswordComponent } from './changepassword/changepassword.component';
+// import { ChangepasswordComponent } from '../core/components/admin/changepassword/changepassword.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CoreRoutingModule } from '../core/core-routing.module';
 import { RouterModule } from '@angular/router';
@@ -25,9 +25,9 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatRadioModule } from '@angular/material/radio';
 import { HomePageComponent } from './home-page/home-page.component';
 import { HeaderFooterComponent } from './header-footer/header-footer.component';
-import { DeleteuserComponent } from './deleteuser/deleteuser.component';
-import { OtpComponent } from './otp/otp.component';
-import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+
+
+
 
 
 
@@ -41,13 +41,13 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
   ReportsComponent,
   CurrentStatusComponent,
   TaskComponent,
-  OtpComponent,
+  
  
-  ChangepasswordComponent,
+
   HomePageComponent,
   HeaderFooterComponent,
-  DeleteuserComponent,
-  ForgotPasswordComponent,
+
+ 
   
 
 

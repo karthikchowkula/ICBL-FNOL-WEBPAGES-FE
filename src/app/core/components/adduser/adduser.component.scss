@@ -3,8 +3,8 @@
 }
 
 .sure_number{
-    margin: 0 auto;
-    width: 50%;
+    // margin: 0 auto;
+    // width: 100%;
     border: 1px solid red;
     padding: 20px;
 }
@@ -79,4 +79,8 @@ color: purple;
 .mat-form-field-appearance-fill .mat-form-field-underline::before{
     width: 0px !important;
 
+}
+
+.cdk-overlay-pane{
+    max-width: 80vw !important;
 }

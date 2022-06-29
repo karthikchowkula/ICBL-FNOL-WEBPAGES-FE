@@ -5,8 +5,11 @@ import { ApiService } from '../../services/api.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { Users } from '../../Interfaces/getusers';
 import { EdituserComponent } from './edituser/edituser.component';
-import { ChangepasswordComponent } from '../../../features/changepassword/changepassword.component';
-import { DeleteuserComponent } from '../../../features/deleteuser/deleteuser.component';
+import { ChangepasswordComponent } from './changepassword/changepassword.component';
+import { DeleteuserComponent } from './deleteuser/deleteuser.component';
+import { TaskComponent } from 'src/app/features/task/task.component';
+import { CurrentStatusComponent } from 'src/app/features/current-status/current-status.component';
+import { UtilityComponent } from 'src/app/features/utility/utility.component';
 
 export interface PeriodicElement {
   name: string;
@@ -54,8 +57,10 @@ this.apiservice.getUsers().subscribe(
 
   addUser_dialog(){
     const dialogRef = this.dialog.open(AdduserComponent, {
-      width: '1050px',
-      height:'500px'
+      width: '550px',
+      height:'500px',
+    
+     
     });
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
@@ -64,7 +69,7 @@ this.apiservice.getUsers().subscribe(
   }
   editUser_dialog(){
     const dialogRef = this.dialog.open(EdituserComponent, {
-      width: '1050px',
+      width: '550px',
       height:'500px'
     });
     dialogRef.afterClosed().subscribe(result => {
@@ -74,7 +79,7 @@ this.apiservice.getUsers().subscribe(
   }
   changePassword_dialog(){
     const dialogRef = this.dialog.open(ChangepasswordComponent, {
-      width: '1050px',
+      width: '550px',
       height:'500px'
     });
     dialogRef.afterClosed().subscribe(result => {
@@ -84,7 +89,7 @@ this.apiservice.getUsers().subscribe(
   }
   deleteUser_dialog(){
     const dialogRef = this.dialog.open(DeleteuserComponent, {
-      width: '1050px',
+      width: '550px',
       height:'500px'
     });
     dialogRef.afterClosed().subscribe(result => {
@@ -92,5 +97,7 @@ this.apiservice.getUsers().subscribe(
 
     });
   }
+ 
+
   }
 
