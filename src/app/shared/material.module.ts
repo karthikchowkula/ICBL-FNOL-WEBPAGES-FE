@@ -47,6 +47,7 @@ import {MatFormFieldModule} from '@angular/material/form-field'
 
 
 import {NativeDateAdapter, DateAdapter, MAT_DATE_FORMATS} from '@angular/material/core';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   exports: [
@@ -95,6 +96,7 @@ import {NativeDateAdapter, DateAdapter, MAT_DATE_FORMATS} from '@angular/materia
     PortalModule,
     ScrollingModule,
     MatSelectModule,
+    FlexLayoutModule,
 
     
     

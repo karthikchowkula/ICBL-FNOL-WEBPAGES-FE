@@ -2,7 +2,7 @@ import { AuthInterceptor } from './Interceptors/auth.interceptor';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from './components/login/login.component';
-import { HeaderFooterComponent } from './components/header-footer/header-footer.component';
+
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../shared/material.module';
 import { CoreRoutingModule } from './core-routing.module';
@@ -13,41 +13,37 @@ import { HttpClientModule } from '@angular/common/http';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { SecureLocalStorageService } from './services/securels.service';
-import { AdduserComponent } from './components/admin/adduser/adduser.component';
-
 import { FlexLayoutModule } from '@angular/flex-layout';
-
-
-import { EdituserComponent } from './components/admin/edituser/edituser.component';
-import { DeleteuserComponent } from './components/admin/deleteuser/deleteuser.component';
-import { ChangepasswordComponent } from './components/admin/changepassword/changepassword.component';
-import { ForgotPasswordComponent } from './components/admin/forgot-password/forgot-password.component';
-import { NewPasswordComponent } from './components/admin/new-password/new-password.component';
-import { OtpComponent } from './components/admin/otp/otp.component';
-import { HomePageComponent } from './components/home-page/home-page.component';
 import { MatOptgroup, MatOption } from '@angular/material/core';
 import { matSelectAnimations } from '@angular/material/select';
-import { TaskComponent } from './components/task/task.component';
+import { AdduserComponent } from './components/adduser/adduser.component';
+import { EdituserComponent } from './components/admin/edituser/edituser.component';
+import { NewPasswordComponent } from '../features/new-password/new-password.component';
+
+
 
 
 @NgModule({
   declarations: [
     LoginComponent,
-    HeaderFooterComponent,
+   
     ResetPasswordComponent,
     AdminComponent,
     AdduserComponent,
-
+   
+NewPasswordComponent,
     
 
+    
+   
+  
+    
+   
+   
     EdituserComponent,
-    DeleteuserComponent,
-    ChangepasswordComponent,
-    ForgotPasswordComponent,
-    NewPasswordComponent,
-    OtpComponent,
-    HomePageComponent,
-    TaskComponent,
+   
+
+    
 
    
   ],
@@ -62,6 +58,8 @@ import { TaskComponent } from './components/task/task.component';
     HttpClientModule,
     FlexLayoutModule,
     MatFormFieldModule,
+    
+    
     
     
     

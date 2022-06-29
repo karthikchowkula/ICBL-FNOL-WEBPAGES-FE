@@ -15,9 +15,12 @@ import { SecureLocalStorageService } from './core/services/securels.service';
 import {NativeDateAdapter, DateAdapter, MAT_DATE_FORMATS} from '@angular/material/core';
 import { AuthInterceptor } from './core/Interceptors/auth.interceptor';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { FeaturesModule } from './features/features.module';
+
 @NgModule({
 declarations: [
 AppComponent,
+
 
 ],
 imports: [
@@ -30,6 +33,7 @@ NgbModule,
 RouterModule,
 HttpClientModule,
 FlexLayoutModule,
+FeaturesModule,
 
 ],
 schemas: [CUSTOM_ELEMENTS_SCHEMA],

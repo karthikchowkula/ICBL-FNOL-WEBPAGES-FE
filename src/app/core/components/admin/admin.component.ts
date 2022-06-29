@@ -1,12 +1,12 @@
-import { AdduserComponent } from './adduser/adduser.component';
+import { AdduserComponent } from '../adduser/adduser.component';
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ApiService } from '../../services/api.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { Users } from '../../Interfaces/getusers';
 import { EdituserComponent } from './edituser/edituser.component';
-import { ChangepasswordComponent } from './changepassword/changepassword.component';
-import { DeleteuserComponent } from './deleteuser/deleteuser.component';
+import { ChangepasswordComponent } from '../../../features/changepassword/changepassword.component';
+import { DeleteuserComponent } from '../../../features/deleteuser/deleteuser.component';
 
 export interface PeriodicElement {
   name: string;

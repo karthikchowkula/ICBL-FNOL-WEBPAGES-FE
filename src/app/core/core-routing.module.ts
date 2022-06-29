@@ -2,19 +2,21 @@ import { ResetPasswordComponent } from './components/reset-password/reset-passwo
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
-import { HeaderFooterComponent } from './components/header-footer/header-footer.component';
-import { AssistanceReqFormComponent } from '../features/assistance-req-form/assistance-req-form.component';
-import { AdminComponent } from './components/admin/admin.component';
-import { AdduserComponent } from './components/admin/adduser/adduser.component';
-import { EdituserComponent } from './components/admin/edituser/edituser.component';
-import { DeleteuserComponent } from './components/admin/deleteuser/deleteuser.component';
-import { ChangepasswordComponent } from './components/admin/changepassword/changepassword.component';
-import { ForgotPasswordComponent } from './components/admin/forgot-password/forgot-password.component';
-import { NewPasswordComponent } from './components/admin/new-password/new-password.component';
-import { OtpComponent } from './components/admin/otp/otp.component';
-import { HomePageComponent } from './components/home-page/home-page.component';
-import { TaskComponent } from './components/task/task.component';
+import { HeaderFooterComponent } from '../features/header-footer/header-footer.component';
 
+import { AdminComponent } from './components/admin/admin.component';
+import { AdduserComponent } from './components/adduser/adduser.component';
+import { EdituserComponent } from './components/admin/edituser/edituser.component';
+import { DeleteuserComponent } from '../features/deleteuser/deleteuser.component';
+import { ChangepasswordComponent } from '../features/changepassword/changepassword.component';
+import { ForgotPasswordComponent } from '../features/forgot-password/forgot-password.component';
+import { NewPasswordComponent } from '../features/new-password/new-password.component';
+import { OtpComponent } from '../features/otp/otp.component';
+import { HomePageComponent } from '../features/home-page/home-page.component';
+import { TaskComponent } from '../features/task/task.component';
+import { UtilityComponent } from '../features/utility/utility.component';
+import { ReportsComponent } from '../features/reports/reports.component';
+import { CurrentStatusComponent } from '../features/current-status/current-status.component';
 const routes: Routes = [
 {path:'login',component:LoginComponent},
 {
@@ -22,7 +24,7 @@ path:'',component:LoginComponent
 } ,
 {path:'resetpass',component:ResetPasswordComponent},
 {path:'header_footer',component:HeaderFooterComponent},
-{path:'assitance_reqs_forms',component:AssistanceReqFormComponent},
+
 {path:'admin',component:AdminComponent},
 {path:'add_user',component:AdduserComponent},
 {path:'delete_user',component:DeleteuserComponent},
@@ -32,7 +34,14 @@ path:'',component:LoginComponent
 {path:'new_password',component:NewPasswordComponent}, 
 {path:'otp',component:OtpComponent}, 
 {path:'home_page',component:HomePageComponent}, 
-{path:'task_page',component:TaskComponent}, 
+{path:'task_page',component:TaskComponent},
+{path:'utility_page',component:UtilityComponent},
+{path:'reports_page',component:ReportsComponent},
+{path:'current_status',component:CurrentStatusComponent},
+
+
+
+
 
 
 ];

@@ -1,0 +1,70 @@
+<!--Header Section-->
+<section class="task_sec">
+    <div class="task_maine">
+        <div class="wrapper">
+            <div class="number_task">
+            <div class="" fxLayout="row" fxLayout.xl="row" fxLayout.lg="row" fxLayout.md="row" fxLayout.sm="row"
+                fxLayout.xs="column" fxLayoutAlign="start stretch" fxLayoutGap="15px">
+                <!-- 1 -->
+                <div fxLayout="column" fxFlex.xl="40" fxFlex.lg="40" fxFlex.md="40" fxFlex.sm="40" fxFlex.xs="100"
+                    fxFlexFill>
+                    <div class="task_one">
+                     <p class="number_ones">Tasks</p>
+                        <mat-form-field style="width:60%" appearance="fill">
+                          <mat-label>Select Task</mat-label>
+                          <mat-select>
+                            <mat-option *ngFor="let food of foods" [value]="food.value">
+                              {{food.viewValue}}
+                            </mat-option>
+                          </mat-select>
+                        </mat-form-field>
+                        
+                          
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div fxLayout="column" fxFlex.xl="40" fxFlex.lg="40" fxFlex.md="40" fxFlex.sm="40" fxFlex.xs="100"
+                fxFlexFill>
+                <div class="task_one">
+                    <p class="number_ones">Agents</p>
+                       <mat-form-field style="width:60%" appearance="fill">
+                         <mat-label>Select Agent</mat-label>
+                         <mat-select>
+                           <mat-option *ngFor="let food of foods" [value]="food.value">
+                             {{food.viewValue}}
+                           </mat-option>
+                         </mat-select>
+                       </mat-form-field>
+                       
+                         
+                   </div>
+            </div>
+            <!-- 3 -->
+            <div fxLayout="column" fxFlex.xl="20" fxFlex.lg="20" fxFlex.md="20" fxFlex.sm="20" fxFlex.xs="100"
+            fxFlexFill>
+            <div class="" >
+                <button class="assign_btns" mat-button>Assign</button>
+
+            </div>
+        </div>
+               
+            </div>
+            <div class="" fxLayout="row" fxLayout.xl="row" fxLayout.lg="row" fxLayout.md="row" fxLayout.sm="row"
+            fxLayout.xs="column" fxLayoutAlign="start stretch" fxLayoutGap="15px">
+            <!-- 1 -->
+            <div fxLayout="column" fxFlex.xl="100" fxFlex.lg="100" fxFlex.md="100" fxFlex.sm="100" fxFlex.xs="100"
+                fxFlexFill>
+                <div class="content_data">
+                <h5>Agent Availability</h5>
+                <p><i class="fa fa-circle" aria-hidden="true"></i>John Doe is available</p>
+                <p class="sequence"><i class="fa fa-circle" aria-hidden="true"></i>Chad Sobers will be available in 00:11 (HH:MM)</p>
+                </div>
+                </div>
+                </div>
+            </div>
+
+        
+
+        </div>
+    </div>
+</section>
