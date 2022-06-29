@@ -7,11 +7,11 @@ import { HeaderFooterComponent } from '../features/header-footer/header-footer.c
 import { AdminComponent } from './components/admin/admin.component';
 import { AdduserComponent } from './components/adduser/adduser.component';
 import { EdituserComponent } from './components/admin/edituser/edituser.component';
-import { DeleteuserComponent } from '../features/deleteuser/deleteuser.component';
-import { ChangepasswordComponent } from '../features/changepassword/changepassword.component';
-import { ForgotPasswordComponent } from '../features/forgot-password/forgot-password.component';
-import { NewPasswordComponent } from '../features/new-password/new-password.component';
-import { OtpComponent } from '../features/otp/otp.component';
+import { DeleteuserComponent } from './components/admin/deleteuser/deleteuser.component';
+import { ChangepasswordComponent } from './components/admin/changepassword/changepassword.component';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { NewPasswordComponent } from './components/new-password/new-password.component';
+import { OtpComponent } from './components/otp/otp.component';
 import { HomePageComponent } from '../features/home-page/home-page.component';
 import { TaskComponent } from '../features/task/task.component';
 import { UtilityComponent } from '../features/utility/utility.component';
@@ -24,7 +24,6 @@ path:'',component:LoginComponent
 } ,
 {path:'resetpass',component:ResetPasswordComponent},
 {path:'header_footer',component:HeaderFooterComponent},
-
 {path:'admin',component:AdminComponent},
 {path:'add_user',component:AdduserComponent},
 {path:'delete_user',component:DeleteuserComponent},
@@ -38,12 +37,6 @@ path:'',component:LoginComponent
 {path:'utility_page',component:UtilityComponent},
 {path:'reports_page',component:ReportsComponent},
 {path:'current_status',component:CurrentStatusComponent},
-
-
-
-
-
-
 ];
 
 @NgModule({

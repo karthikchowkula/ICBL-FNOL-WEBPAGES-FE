@@ -14,33 +14,28 @@ import { ResetPasswordComponent } from './components/reset-password/reset-passwo
 import { AdminComponent } from './components/admin/admin.component';
 import { SecureLocalStorageService } from './services/securels.service';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatOptgroup, MatOption } from '@angular/material/core';
-import { matSelectAnimations } from '@angular/material/select';
+// import { MatOptgroup, MatOption } from '@angular/material/core';
+// import { matSelectAnimations } from '@angular/material/select';
 import { AdduserComponent } from './components/adduser/adduser.component';
 import { EdituserComponent } from './components/admin/edituser/edituser.component';
-import { NewPasswordComponent } from '../features/new-password/new-password.component';
-
-
-
+import { NewPasswordComponent } from './components/new-password/new-password.component';
+import { ChangepasswordComponent } from './components/admin/changepassword/changepassword.component';
+import { DeleteuserComponent } from './components/admin/deleteuser/deleteuser.component';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { OtpComponent } from './components/otp/otp.component';
 
 @NgModule({
   declarations: [
-    LoginComponent,
-   
-    ResetPasswordComponent,
-    AdminComponent,
-    AdduserComponent,
-   
+LoginComponent,
+ResetPasswordComponent,
+AdminComponent,
+AdduserComponent,
+ChangepasswordComponent,
 NewPasswordComponent,
-    
-
-    
-   
-  
-    
-   
-   
-    EdituserComponent,
+DeleteuserComponent,
+ForgotPasswordComponent,
+OtpComponent,
+EdituserComponent,
    
 
     
