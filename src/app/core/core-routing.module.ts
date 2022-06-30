@@ -1,17 +1,17 @@
-import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
+import { ResetPasswordComponent } from './components/forgot-password/reset-password/reset-password.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { HeaderFooterComponent } from '../features/header-footer/header-footer.component';
 
 import { AdminComponent } from './components/admin/admin.component';
-import { AdduserComponent } from './components/adduser/adduser.component';
+import { AdduserComponent } from './components/admin/adduser/adduser.component';
 import { EdituserComponent } from './components/admin/edituser/edituser.component';
 import { DeleteuserComponent } from './components/admin/deleteuser/deleteuser.component';
 import { ChangepasswordComponent } from './components/admin/changepassword/changepassword.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
-import { NewPasswordComponent } from './components/new-password/new-password.component';
-import { OtpComponent } from './components/otp/otp.component';
+import { NewPasswordComponent } from './components/forgot-password/new-password/new-password.component';
+import { OtpComponent } from './components/forgot-password/otp/otp.component';
 import { HomePageComponent } from '../features/home-page/home-page.component';
 import { TaskComponent } from '../features/task/task.component';
 import { UtilityComponent } from '../features/utility/utility.component';

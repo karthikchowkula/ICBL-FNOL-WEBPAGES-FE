@@ -1,9 +1,9 @@
-import { RoleService } from '../../services/role.service';
-import { ApiService } from '../../services/api.service';
+import { RoleService } from '../../../services/role.service';
+import { ApiService } from '../../../services/api.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormControlName, FormGroup, Validators } from '@angular/forms';
 import { TooltipPosition } from '@angular/material/tooltip';
-import { getRole } from '../../Interfaces/getrole';
+import { getRole } from '../../../Interfaces/getrole';
 
 @Component({
   selector: 'app-adduser',
