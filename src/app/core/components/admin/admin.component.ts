@@ -1,4 +1,4 @@
-import { AdduserComponent } from '../adduser/adduser.component';
+import { AdduserComponent } from './adduser/adduser.component';
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ApiService } from '../../services/api.service';
