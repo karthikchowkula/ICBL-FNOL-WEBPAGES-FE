@@ -58,8 +58,10 @@
               <div class="custom-form-group">
                 <div class="custom-form-control">
 
-                  <div class="name_data">
-                    <mat-label class="labels_sector">Phone:</mat-label>
+                <div class="admin_admin">
+                 <div style="width: 10%;margin-top: 10px;" class="name_data">
+                    <div class="time_sectors">
+                  <!-- <mat-label class="labels_sector">+91</mat-label> -->
                     <mat-form-field appearance="outline">
 
                       <mat-select [formControl]="position">
@@ -69,11 +71,34 @@
                         </mat-option>
                       </mat-select>
                     </mat-form-field>
-                    <p class="good_sen">You are good to go!</p>
+                  </div>
+
+                    
+                  </div>
+                  <div style="width: 90%;" class="number_response">
+
+  <div class="form-section">
+              <div class="custom-form-group">
+                <div class="custom-form-control">
+
+                  <div class="name_data">
+                    <!-- <mat-label class="labels_sector">Password:</mat-label> -->
+                    <mat-form-field appearance="outline">
+
+                      <input matInput placeholder="8008686274">
+                    </mat-form-field>
+                    <p class="good_sen">Your Password is Strong</p>
                   </div>
                 </div>
               </div>
             </div>
+                  </div>
+</div>
+                </div>
+              </div>
+            </div>
+
+
           </div>
 
           <!-- empty -->
@@ -130,9 +155,16 @@
               <h4>Role</h4>
             </div>
 
-            <ul class="radio_sector">
+            <!-- <mat-radio-group aria-label="Select an option">
+              <mat-radio-button value="1">Option 1</mat-radio-button>
+              <mat-radio-button value="2">Option 2</mat-radio-button>
+            </mat-radio-group> -->
+
+
+            <mat-radio-group aria-label="Select an option" class="radio_sector">
               <li>
                 <mat-radio-button value="1">Agent App</mat-radio-button>
+                
               </li>
               <li>
                 <mat-radio-button value="2">CC</mat-radio-button>
@@ -144,7 +176,7 @@
                 <mat-radio-button value="2">Agent Manager</mat-radio-button>
               </li>
 
-            </ul>
+            </mat-radio-group>
 
           </div>
 

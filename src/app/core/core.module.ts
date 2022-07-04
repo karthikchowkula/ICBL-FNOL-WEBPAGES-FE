@@ -37,10 +37,6 @@ ForgotPasswordComponent,
 OtpComponent,
 EdituserComponent,
    
-
-    
-
-   
   ],
   imports: [
     CommonModule,
